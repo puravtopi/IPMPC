@@ -6,14 +6,14 @@
         <input type="checkbox" ID="chkIliotibialLeft" onclick="checkMe(this)" value="iliotibial band" />iliotibial band
         <label>. &nbsp;</label>
         <br />
-        <div style="display:none">
+        <section style="display:none">
             <label>Range of motion is </label>
             <section class="dropdown">
                 <input type="text" id="txtRangeOfMotionLeft" onchange="txtMe(this)" value="mildly decreased. " />
                 <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtRangeOfMotionLeft', this.value)" id="ddlRangeOfMotionLeft"><option></option><option>mildly decreased. </option><option>moderately decreased. </option><option>severely decreased. </option></select>
             </section>
 
-        </div>
+        </section>
         <label class="control-label">Tests:</label>
         <input type="checkbox" ID="chkOberLeft" onclick="checkMe(this)" value="Ober" /> Ober
         <input type="checkbox" ID="chkFaberLeft" onclick="checkMe(this)" value="FABER" />FABER
@@ -31,7 +31,7 @@
             <button type="button" id="start_button" onclick="startButton(event)">
                 <img src="images/mic.gif" alt="start" />
             </button>
-            <div style="display: none"><span class="final" id="final_span"></span><span class="interim" id="interim_span"></span></div>
+            <section style="display: none"><span class="final" id="final_span"></span><span class="interim" id="interim_span"></span></section>
         </section>
 
 
@@ -44,7 +44,7 @@
         <input type="checkbox" ID="chkIliotibialRight" onclick="checkMe(this)" value="iliotibial band" />iliotibial band
         <label>.</label>
         <br />
-        <div style="display:none">
+        <section style="display:none">
             <p>
                 <label>Range of motion is </label>
                 <section class="dropdown">
@@ -53,7 +53,7 @@
                 </section>
 
             </p>
-        </div>
+        </section>
 
         <span class="control-label"><b>Tests: </b></span>
         <input type="checkbox" ID="chkOberLeft" onclick="checkMe(this)" value="Ober" /> Ober
@@ -72,7 +72,7 @@
             <button type="button" id="start_button" onclick="startButton(event)">
                 <img src="images/mic.gif" alt="start" />
             </button>
-            <div style="display: none"><span class="final" id="final_span"></span><span class="interim" id="interim_span"></span></div>
+            <section style="display: none"><span class="final" id="final_span"></span><span class="interim" id="interim_span"></span></section>
         </section>
 
     </div>

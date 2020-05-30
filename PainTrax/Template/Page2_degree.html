@@ -1,11 +1,11 @@
 <div class="form-horizontal">
 
     <strong class="labelcolor">General:</strong>
-    <input type='text' ID="txtGeneral" onchange="txtMe(this)" style="Width:782px" />
+    <input type='text' ID="txtGeneral" onchange="txtMe(this)" style="Width:782px" value="AAOx3. No acute distress." />
     <br />
     <br />
     <strong class="labelcolor">HEENT:</strong>
-    <input type='text' ID="txtHEENT" onchange="txtMe(this)" style="Width:782px" />
+    <input type='text' ID="txtHEENT" onchange="txtMe(this)" style="Width:782px" value="Within normal limits. />
     <br />
     <br />
     <strong class="labelcolor">Occpital headaches:</strong>
@@ -23,11 +23,11 @@
     <br />
 
     <strong class="labelcolor">Chest, Cardiovascular, Abdomen:</strong>
-    <input type='text' ID="txtCCA" onchange="txtMe(this)" style="Width:782px" />
+    <input type='text' ID="txtCCA" onchange="txtMe(this)" style="Width:782px" value="Within normal limits." />
     <br />
     <br />
     <strong class="labelcolor">Psych/Neuro:</strong>
-    <input type='text' ID="txtPhy" onchange="txtMe(this)" style="Width:782px" />
+    <input type='text' ID="txtPhy" onchange="txtMe(this)" style="Width:782px" value="No focal deficits. Cranial nerves are grossly intact. No clonus."/>
     <br />
     <br />
     <strong class="labelcolor">Gait:</strong>
@@ -35,10 +35,14 @@
         <section class="dropdown" style="width:300px">
             <input type="text" id="txtgait" value="has a normal gait pattern" onchange="txtMe(this)" />
             <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtgait', this.value)" id="ddlgait">
-                <option selected="selected">has a normal gait pattern</option>
+                <!--<option selected="selected">has a normal gait pattern</option>
                 <option>ambulates with a cane</option>
                 <option>ambulates with a walker</option>
-                <option>ambulates with crutches</option>
+                <option>ambulates with crutches</option>-->
+                <option value=""></option>
+                <option value="Normal" selected="selected">Normal</option>
+                <option value="Guarded">Guarded</option>
+                <option value="Antalgic<">Antalgic<</option>
             </select>
         </section>
     </p>
