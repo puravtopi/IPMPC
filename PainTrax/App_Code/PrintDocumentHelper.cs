@@ -47,8 +47,7 @@ public class PrintDocumentHelper
                     String[] attrib = tagvalue.Split(' ');
                     string id = "", value = "";
                     bool check = false;
-
-
+                    
 
                     foreach (string att in attrib)
                     {
@@ -63,8 +62,8 @@ public class PrintDocumentHelper
                             int startindex = tagvalue.IndexOf("value=") + 7;
                             int endindex = tagvalue.IndexOf("\"", startindex);
                             value = tagvalue.Substring(startindex, endindex - startindex);
-                            //        Response.Write("value=" + value  + "<br>");
-                            //        Response.Write(value + "<br>");
+                            // Response.Write("value=" + value  + "<br>");
+                            // Response.Write(value + "<br>");
                         }
                         if (att.ToLower().StartsWith("checked"))
                         {
@@ -78,7 +77,7 @@ public class PrintDocumentHelper
                             Regex rx = new Regex(@"^\s*""?|""?\s*$");
 
                             type = rx.Replace(type, "");
-                            //      Response.Write("type="+type+"<br>");
+                            //Response.Write("type="+type+"<br>");
                         }
                         // d.ToString();
                     }
@@ -98,14 +97,13 @@ public class PrintDocumentHelper
                     }
                     else if (type == "text")
                     {
-                        //  Regex rx = new Regex(@"^\s*""?|""?\s*$");
+                        // Regex rx = new Regex(@"^\s*""?|""?\s*$");
                         // value = rx.Replace(value, "");
-                        //    Response.Write(value);
-                        sb.Append(value + " ");
+                        // Response.Write(value);
+                        if (!string.IsNullOrEmpty(value))
+                            sb.Append(value + " ");
                     }
-
-
-                }
+                                                       }
                 else if (match.Groups[2].Value.Length == 0)
                 {
                     if ((prevtype == "checkbox" || prevtype == "radio") && chkgrp > 0)
@@ -135,7 +133,8 @@ public class PrintDocumentHelper
             }
             chkgrp = 0;
         }
-        return sb.Replace(" .", ". ").Replace(".", ". ").ToString();
+        str = sb.Replace(" .", ". ").Replace(".", ". ").ToString();
+        return str.Replace(". .", ". ").ToString();
     }
 
     public string getDocumentStringDenies(string html)
@@ -286,17 +285,17 @@ public class PrintDocumentHelper
             string prevtype = "", type = "";
             int chkgrp = 0;
 
-            if (!string.IsNullOrEmpty(bodypart))
-            {
-                if (i == 0 && str[0] != "")
-                {
-                    sb.Append("<b>LEFT " + bodypart.ToUpper() + ": </b> ");
-                }
-                else if (i == 1 && str[1] != "")
-                {
-                    sb.Append("<b>RIGHT " + bodypart.ToUpper() + ": </b> ");
-                }
-            }
+            //if (!string.IsNullOrEmpty(bodypart))
+            //{
+            //    if (i == 0 && str[0] != "")
+            //    {
+            //        sb.Append("<b>LEFT " + bodypart.ToUpper() + ": </b> ");
+            //    }
+            //    else if (i == 1 && str[1] != "")
+            //    {
+            //        sb.Append("<b>RIGHT " + bodypart.ToUpper() + ": </b> ");
+            //    }
+            //}
 
             foreach (Match match in regex.Matches(str[i]))
             {
@@ -369,7 +368,7 @@ public class PrintDocumentHelper
                             else if (value.Length > 0 && check)
                             {
                                 chkgrp += 1;
-                                sb.Append(value + ",");
+                                sb.Append(value + ", ");
                             }
                         }
                         else if (type == "text")
@@ -388,7 +387,7 @@ public class PrintDocumentHelper
                         {
                             if (sb.ToString().Contains(','))
                             {
-                                //sb.Remove(sb.Length - 2, 2).Append(" ");
+                                sb.Remove(sb.Length - 2, 2).Append(" ");
                                 if (chkgrp > 0)
                                 {
                                     if (sb.ToString().LastIndexOf(",") >= 0)
@@ -406,7 +405,7 @@ public class PrintDocumentHelper
             }
             if ((prevtype == "checkbox" || prevtype == "radio") && chkgrp > 1)
             {
-              //  sb.Remove(sb.Length - 2, 2).Append(" ");
+                sb.Remove(sb.Length - 2, 2).Append(" ");
                 if (chkgrp > 0)
                 {
                     if (sb.ToString().LastIndexOf(",") >= 0)
@@ -420,14 +419,14 @@ public class PrintDocumentHelper
                     sb.Append("<br/><br/>");
             }
         }
-        return sb.Replace(" .", ". ").Replace(".",". ").ToString();
+        return sb.Replace(" .", ". ").Replace(".", ". ").ToString();
     }
 
     public string getDocumentStringLeftRightPE(string html, string bodypart = "")
     {
 
         String strfile = html;
-        String[] str = new String[2];   
+        String[] str = new String[2];
         StringBuilder sb = new StringBuilder();
         int leftstart, leftend, rightstart, rightend;
         leftstart = strfile.IndexOf(@"<div id=""WrapLeftPE""");
@@ -580,7 +579,7 @@ public class PrintDocumentHelper
                     sb.Append("<br/><br/>");
             }
         }
-        return sb.Replace(" .", ". ").Replace(".",". ").ToString();
+        return sb.Replace(" .", ". ").Replace(".", ". ").ToString();
     }
 
     public string getLowbackTestString(string NameTest, string LeftTest, string RightTest, string TextVal)
@@ -752,5 +751,5 @@ public class PrintDocumentHelper
         //}
     }
 
-  
+
 }

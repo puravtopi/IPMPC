@@ -1039,8 +1039,8 @@ public partial class PatientIntakeList : System.Web.UI.Page
             str = str.Replace("#pastsurgicalhistory", string.IsNullOrEmpty(page1["PSH"]) ? "" : "<b>Past Surgical History: </b>" + page1["PSH"].TrimEnd('.') + ".<br/>");
             str = str.Replace("#pastmedications", string.IsNullOrEmpty(page1["Medication"]) ? "" : "<b>Medications: </b>" + page1["Medication"].TrimEnd('.') + ".<br/>");
             str = str.Replace("#allergies", string.IsNullOrEmpty(page1["Allergies"]) ? "" : "<b>Allergies: </b>" + page1["Allergies"].TrimEnd('.').ToUpper() + ".<br/>");
-            //str = str.Replace("#familyhistory", string.IsNullOrEmpty(page1["FamilyHistory"]) ? "" : "<b>FAMILY HISTORY: </b><br/>" + page1["FamilyHistory"].TrimEnd('.') + ".<br/><br/>");
-            str = str.Replace("#familyhistory", "");
+            str = str.Replace("#familyhistory", string.IsNullOrEmpty(page1["FamilyHistory"]) ? "" : "<b>Family History: </b>" + page1["FamilyHistory"].TrimEnd('.') + ".<br/><br/>");
+            //str = str.Replace("#familyhistory", "");
 
         }
 
@@ -1116,13 +1116,13 @@ public partial class PatientIntakeList : System.Web.UI.Page
 
 
             if (!string.IsNullOrEmpty(page1_accident["txt_accident_desc_3"].Trim()))
-                str = str.Replace("#cc1", page1_accident["txt_accident_desc_3"].Trim());
+                str = str.Replace("#cc1", page1_accident["txt_accident_desc_3"].Trim() + "<br/><br/>");
             else
                 str = str.Replace("#cc1", "");
 
 
             if (!string.IsNullOrEmpty(page1_accident["txt_accident_desc_4"].Trim()))
-                str = str.Replace("#cc2", "<br/><br/>" + page1_accident["txt_accident_desc_4"].Trim());
+                str = str.Replace("#cc2", page1_accident["txt_accident_desc_4"].Trim() + "<br/><br/>");
             else
                 str = str.Replace("#cc2", "");
 
@@ -1159,11 +1159,11 @@ public partial class PatientIntakeList : System.Web.UI.Page
             if (!string.IsNullOrEmpty(strRos))
                 strRos = "The patient admits to " + strRos.TrimEnd() + ". ";
 
-            //strRosDenis = helper.getDocumentStringDenies(ds.Tables[0].Rows[0]["rosSectionHTML"].ToString());
-            //if (!string.IsNullOrEmpty(strRosDenis))
-            //    strRosDenis = "The patient denies " + strRosDenis.TrimEnd() + ".";
+            strRosDenis = helper.getDocumentStringDenies(ds.Tables[0].Rows[0]["rosSectionHTML"].ToString());
+            if (!string.IsNullOrEmpty(strRosDenis))
+                strRosDenis = "The patient denies " + strRosDenis.TrimEnd() + ".";
         }
-        str = str.Replace("#ros", strRos);
+        str = str.Replace("#ros", strRos + strRosDenis);
 
         //strComplain = "";
 
@@ -1190,7 +1190,7 @@ public partial class PatientIntakeList : System.Web.UI.Page
             if (!string.IsNullOrEmpty(page2["txtHEENT"]))
                 str = str.Replace("#heent", string.IsNullOrEmpty(page2["txtHEENT"]) ? "" : "HEENT: " + page2["txtHEENT"].TrimEnd('.') + ".<br/>");
             if (!string.IsNullOrEmpty(page2["txtOcc"]))
-                str = str.Replace("#occ_head", string.IsNullOrEmpty(page2["txtOcc"]) ? "" : "Occitpial headaches: " + page2["txtOcc"].TrimEnd('.') + ".<br/>");
+                str = str.Replace("#occ_head", string.IsNullOrEmpty(page2["txtOcc"]) ? "" : "Occpital headaches: " + page2["txtOcc"].TrimEnd('.') + ".<br/>");
             if (!string.IsNullOrEmpty(page2["txtCCA"]))
                 str = str.Replace("#cca", string.IsNullOrEmpty(page2["txtCCA"]) ? "" : "Chest, Cardiovascular, Abdomen: " + page2["txtCCA"].TrimEnd('.') + ".<br/>");
             if (!string.IsNullOrEmpty(page2["txtPhy"]))
@@ -1338,7 +1338,7 @@ public partial class PatientIntakeList : System.Web.UI.Page
 
 
 
-         
+
 
 
             string strExceptions = "";
@@ -1361,7 +1361,7 @@ public partial class PatientIntakeList : System.Web.UI.Page
                     strExceptions = strExceptions + ", " + "right brachioradialis " + page3_1["RBrachioradialis"] + "/2";
 
                 if (!string.IsNullOrEmpty(strExceptions))
-                    str = str.Replace("#dtr-ue", "DTR-UE : " + strExceptions.TrimStart(',') +"<br/>");
+                    str = str.Replace("#dtr-ue", "DTR-UE : " + strExceptions.TrimStart(',') + "<br/>");
                 else
                     str = str.Replace("#dtr-ue", "");
             }
@@ -1370,9 +1370,9 @@ public partial class PatientIntakeList : System.Web.UI.Page
                 str = str.Replace("#dtr-le", "DTR-LE: " + page3_1["txtDTR2"] + "<br/>");
             else
             {
-             
+
                 strExceptions = "";
-                                                                                 
+
                 if (!string.IsNullOrEmpty(page3_1["LKnee"]) && page3_1["LKnee"] != "2")
                     strExceptions = strExceptions + ", left knee " + page3_1["LKnee"] + "/2";
                 if (!string.IsNullOrEmpty(page3_1["RKnee"]) && page3_1["RKnee"] != "2")
@@ -1411,10 +1411,10 @@ public partial class PatientIntakeList : System.Web.UI.Page
             //strRE = strRElist;
 
             if (!string.IsNullOrEmpty(page3_1["txtSensory"]))
-                str = str.Replace("#sen_exm", "Sensory Examination:" + page3_1["txtSensory"] + "<br/>");
+                str = str.Replace("#sen_exm", "Sensory Examination: " + page3_1["txtSensory"] + "<br/>");
             else
             {
-                
+
 
                 strExceptions = "";
                 if (!string.IsNullOrEmpty(page3_1["LLateralarm"]))
@@ -1488,7 +1488,7 @@ public partial class PatientIntakeList : System.Web.UI.Page
                 str = str.Replace("#mmst", "Manual Muscle Strength Testing:" + page3_1["txtMST"] + "<br/>");
             else
             {
-               
+
 
                 strExceptions = "";
                 if (!string.IsNullOrEmpty(page3_1["LAbduction"]))
@@ -2296,7 +2296,7 @@ public partial class PatientIntakeList : System.Web.UI.Page
                 if (!string.IsNullOrEmpty(romstrC))
                     finalrom = "<br/>ROM is as follows: " + romstrC.TrimStart(';') + ". ";
 
-                if (!string.IsNullOrEmpty(romstr))
+                if (!string.IsNullOrEmpty(romstr) && romstr != " ")
                 {
                     if (string.IsNullOrEmpty(romstrC))
                         finalrom = "ROM is as follows: " + romstr.TrimEnd(';') + ".";
@@ -2423,7 +2423,7 @@ public partial class PatientIntakeList : System.Web.UI.Page
             if (!string.IsNullOrEmpty(ds.Tables[0].Rows[0]["PEvalue"].ToString()))
             {
                 shoulderPE = helper.getDocumentStringLeftRightPE(ds.Tables[0].Rows[0]["PEvalue"].ToString());
-                shoulderPE = shoulderPE.Replace(",,", ",").Replace(" ,", ",");
+                shoulderPE = shoulderPE.Replace(",,", ", ").Replace(" ,", ", ");
                 shoulderPE = shoulderPE.Replace("Positive for,", "Test positive for ").Replace("Positive for and ", "positive for ");
                 //        shoulderTP = this.getTPString(ds.Tables[0].Rows[0]["PESides"].ToString(), ds.Tables[0].Rows[0]["PESidesText"].ToString());
 
@@ -2893,9 +2893,9 @@ public partial class PatientIntakeList : System.Web.UI.Page
 
             for (int i = 0; i < val.Length; i++)
             {
-                if (val[i] != "")
+                if (val[i] != "" && val[i] != null && valText[i] != "")
                 {
-                    str = str + "," + val[i] + " " + valText[i].ToString();
+                    str = str + ", " + val[i] + " " + valText[i].ToString();
                 }
             }
         }
@@ -2950,10 +2950,11 @@ public partial class PatientIntakeList : System.Web.UI.Page
                 }
             }
         }
+
         if (!string.IsNullOrEmpty(str))
-            return str.TrimEnd(';') + ".";
+            return (str.TrimEnd(';') + ".").ToLower();
         else
-            return str;
+            return str.ToLower();
     }
 
     public string printPage1(string patientIE_ID, string age = "", string doa = "")
@@ -2980,7 +2981,7 @@ public partial class PatientIntakeList : System.Web.UI.Page
 
         if (ds != null && ds.Tables[0].Rows.Count > 0)
         {
-            str = "The patient is a #age -year-old male who was the #restrained of a vehicle that was involved in a #involve collision on #doa.";
+            str = "The patient is a #age-year-old male who was the #restrained of a vehicle that was involved in a #involve collision on #doa. ";
 
 
             str = str.Replace("#age", age);
@@ -3003,7 +3004,7 @@ public partial class PatientIntakeList : System.Web.UI.Page
                 strBodypart.Replace(",", " and ", strBodypart.ToString().LastIndexOf(","), 1);
 
 
-            str = str.Trim() + "During the accident the patient reports injuries to " + strBodypart.ToString() + ".";
+            str = str.Trim() + " During the accident the patient reports injuries to " + strBodypart.ToString() + ".";
 
 
             //if (!string.IsNullOrEmpty(strBodypart))
@@ -5697,10 +5698,10 @@ public partial class PatientIntakeList : System.Web.UI.Page
         if (_injured.Contains("Neck"))
             str = str + ", neck";
 
-        if (_injured.Contains("Midback"))
+        if (_injured.Contains("MidBack"))
             str = str + ", midback";
 
-        if (_injured.Contains("Lownback"))
+        if (_injured.Contains("LownBack"))
             str = str + ", lownback";
 
         if (_injured.Contains("RightAnkle"))
@@ -5712,7 +5713,7 @@ public partial class PatientIntakeList : System.Web.UI.Page
         if (_injured.Contains("LeftElbow"))
             str = str + ", left elbow";
 
-        if (_injured.Contains("RightElbowt"))
+        if (_injured.Contains("RightElbow"))
             str = str + ", right elbow";
 
         if (_injured.Contains("LeftHip"))
@@ -5754,14 +5755,20 @@ public partial class PatientIntakeList : System.Web.UI.Page
         {
             if (part.ToLower() != "other")
             {
+                string _part = part.ToLower();
                 i++;
-                str = str + i + ". " + part + " Pain. ";
+                if (_part.Contains("left") || _part.Contains("right"))
+                    _part = part.Insert(4, " ");
+                else
+                    _part = part;
+
+                str = str + i + ". " + _part + " Pain. ";
             }
         }
         if (casetype.ToLower() == "nf")
         {
             i++;
-            str = str + i + ". S/P MVA injury on" + doa + ".";
+            str = str + i + ". S/P MVA injury on " + doa + ".";
         }
         return str.TrimStart(',');
     }

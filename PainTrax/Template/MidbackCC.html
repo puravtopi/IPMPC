@@ -5,7 +5,7 @@
     <div class="col-md-9" style="margin-top: 5px">
         <label class="control-label">The patient complains of mid-back pain that is </label>
         <input type="text" id="txtPainScale" style="Width:40px" value="7" onchange="txtMe(this)" />
-        <label class="control-label">/10 with 10 being the worst, which is </label>
+        <label class="control-label">/10, with 10 being the worst, which is </label>
         <input type="checkbox" id="chkcontent" onclick="checkMe(this)" value="constant" />constant &nbsp;
         <input type="checkbox" id="chkintermittent" onclick="checkMe(this)" value="intermittent" />intermittent &nbsp;
         <input type="checkbox" id="chksharp" onclick="checkMe(this)" value="sharp" checked />sharp &nbsp;
@@ -41,7 +41,7 @@
         <input type="checkbox" id="chkworsewalking" onclick="checkMe(this)" value="walking" />walking&nbsp;
         <input type="checkbox" id="chkworseclimbing" onclick="checkMe(this)" value="climbing stairs" />climbing stairs &nbsp;
         <input type="checkbox" id="chkworsedescending" onclick="checkMe(this)" value="descending stairs" />descending stairs &nbsp;
-        <input type="checkbox" id="chkworseworking" onclick="checkMe(this)" value="working" />working and
+        <input type="checkbox" id="chkworseworking" onclick="checkMe(this)" value="working" />working 
         <input type="text" id="txtPainScale2" style="Width:140px" onchange="txtMe(this)" />
         <label>.</label>
 
@@ -65,7 +65,7 @@
         <button type="button" id="start_button1" onclick="startButton1(event)">
             <img src="images/mic.gif" alt="start" />
         </button>
-        <div style="display: none"><span class="final" id="final_span1"></span><span class="interim" id="interim_span1"></span></div>
+        <section style="display: none"><span class="final" id="final_span1"></span><span class="interim" id="interim_span1"></span></section>
     </div>
 </div>
 

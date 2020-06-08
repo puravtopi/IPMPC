@@ -3,9 +3,9 @@
         <span class="control-label"><b><u>CHIEF COMPLAINT</u></b></span>
     </div>
     <div class="col-md-9" style="margin-top: 5px">
-        <label>The patient complains of low back pain that is </label>:
+        <label>The patient complains of low back pain that is </label>
         <input type="text" id="txtPainScale" style="width:40px;text-align:left" value="8" onchange="txtMe(this)" />
-        <label>/10 , with 10 being the worst, which is </label>
+        <label>/10, with 10 being the worst, which is </label>
         <input id="chkcontent" type="checkbox" value="constant" onclick="checkMe(this)" />constant
         <input id="chkintermittent" type="checkbox" value="intermittent" onclick="checkMe(this)" />intermittent.
         <input id="chksharp" type="checkbox" value="sharp" onclick="checkMe(this)" checked="checked" />sharp
@@ -24,6 +24,7 @@
         <input id="txtburningTo" style="visibility:hidden" /><br />
         <label class="control-label">The low back pain radiates to </label>:
         <input id="txtRadiant" type="text" style="width:700px;text-align:left" value="" onchange="txtMe(this)" />
+        <label>.</label>
         <table class="table">
             <thead>
                 <tr>
@@ -199,7 +200,7 @@
                 </tr>
             </tbody>
         </table>
-        <label style="display:none">.</label>
+   
         <label class="control-label">The low back pain is associated with </label>
         <input type="checkbox" id="chknumbness" onclick="checkMe(this)" value="numbness" checked="checked" />numbness
         <input type="checkbox" id="chktingling" onclick="checkMe(this)" value="tingling" checked="checked" />tingling
@@ -210,6 +211,7 @@
         </div>
         <label> to </label>
         <input id="txtRadiant2" type="text" style="width:370px;text-align:left" value="" onchange="txtMe(this)" />
+        <label>.</label>
         <br />
         <table class="table">
             <thead>
@@ -390,7 +392,7 @@
                 </tr>
             </tbody>
         </table>
-        <label style="display:none">.</label>
+       
     </div>
 </div>
 

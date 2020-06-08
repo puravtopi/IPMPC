@@ -5,14 +5,14 @@
     <br />
     <br />
     <strong class="labelcolor">HEENT:</strong>
-    <input type='text' ID="txtHEENT" onchange="txtMe(this)" style="Width:782px" value="Within normal limits. />
+    <input type='text' ID="txtHEENT" onchange="txtMe(this)" style="Width:782px" value="Within normal limits."/>
     <br />
     <br />
-    <strong class="labelcolor">Occpital headaches:</strong>
+        <strong class="labelcolor">Occpital headaches:</strong>
     <p class="inline">
         <section class="dropdown">
             <input type="text" id="txtOcc" value="Non traumatic" onchange="txtMe(this)" />
-            <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtOcc', this.value)" id="ddlOcc">
+            <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtOcc', this.value)" id="ddlOcc" style="Width:700px">
                 <option value=""></option>
                 <option selected="selected">Non traumatic</option>
                 <option>Tenderness at base of skull bilaterally</option>
@@ -63,11 +63,12 @@
     <br />
     <br />
     <strong class="labelcolor">Activities of daily living affected: </strong>
-    <input type='checkbox' id="chkhousework" Value="housework, " onchange="checkMe(this)" />housework
+    <input type='text' ID="txtADLA onchange="txtMe(this)" style="Width:782px" value="" />
+    <!--<input type='checkbox' id="chkhousework" Value="housework, " onchange="checkMe(this)" />housework
     <input type='checkbox' id="chkwork-related" Value="job work-related duties, " onchange="checkMe(this)" />job, work-related duties
     <input type='checkbox' id="chkdriving" Value="driving, " onchange="checkMe(this)" />driving
     <input type='checkbox' id="chksittingincar" Value="sitting in car, " onchange="checkMe(this)" />sitting in car
-    <input type='checkbox' id="chkwalking" Value="walking up/down downstairs" onchange="checkMe(this)" />walking up/down downstairs
+    <input type='checkbox' id="chkwalking" Value="walking up/down downstairs" onchange="checkMe(this)" />walking up/down downstairs-->
     <br />
     <br />
     <strong class="labelcolor">Restrictions: </strong>
@@ -83,6 +84,8 @@
     <input type='checkbox' id="chkStanding" Value="standing" onclick="checkMe(this)" />&nbsp;standing
     <input type='checkbox' id="chkUseofPublic" Value="use of public transportation" onclick="checkMe(this)" />&nbsp;use of public transportation
     <input type='checkbox' id="chkUseofUpper" Value="use of upper extremities" onclick="checkMe(this)" />&nbsp;use of upper extremities
+    <br />
+    <br />
     <br />
     <strong class="labelcolor">Others:</strong>
     <input type='text' ID="txtOtherRestrictions" TabIndex="33" onchange="txtMe(this)" style="Width:782px" />

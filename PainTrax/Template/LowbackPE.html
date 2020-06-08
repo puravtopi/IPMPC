@@ -6,7 +6,7 @@
 
     <label> The lumbar spine exam reveals tenderness upon palpation at  </label>
     <input id="txtspineexam" type="text" style="width:100px;text-align:left" value="L1-S1" onchange="txtMe(this)" />
-    <label>levels</label>
+    <label>levels </label>
     <section class="dropdown">
         <input type="text" id="txtWorse1" onchange="txtMe(this)" />
         <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtWorse1', this.value)" id="ddlWorse1">
@@ -22,13 +22,13 @@
 <br />
 <table>
 <tr>
-<td><label Style="float: left;">The SLR test is</label>&nbsp;
+<td><label Style="float: left;">The SLR test is </label>
     <section class="dropdown">
         <input type="text" id="txtSLR" onchange="txtMe(this)" />
         <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtSLR', this.value)" id="ddlSLR"><option></option><option>normal.</option><option>positive on left.</option><option>positive on right.</option><option>positive bilaterally.</option></select>
     </section></td>
     <td>
-    <label Style="float: left;">The FABER test is</label>&nbsp;
+    <label Style="float: left;">The FABER test is </label>
     <section class="dropdown">
         <input type="text" id="txtFABER" onchange="txtMe(this)" />
         <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtFABER', this.value)" id="ddlFABER"><option></option><option>normal.</option><option>positive on left.</option><option>positive on right.</option><option>positive bilaterally.</option></select>
@@ -37,7 +37,7 @@
 <tr>
 </br>
 <td>
-<label Style="float: left;">The SI test is</label>&nbsp;
+<label Style="float: left;">The SI test is </label>&nbsp;
     <section class="dropdown">
         <input type="text" id="txtSI" onchange="txtMe(this)" />
         <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtSI', this.value)" id="ddlSI"><option></option><option>normal.</option><option>positive on left.</option><option>positive on right.</option><option>positive bilaterally.</option></select>
@@ -48,28 +48,7 @@
 </table>
 
 
-<!--
 
-    <br />
-
-    <label Style="float: left;">The SLR test is</label>&nbsp;
-    <section class="dropdown">
-        <input type="text" id="txtSLR" onchange="txtMe(this)" />
-        <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtSLR', this.value)" id="ddlSLR"><option></option><option>normal.</option><option>positive on left.</option><option>positive on right.</option><option>positive bilaterally.</option></select>
-    </section>
-    <br />
-    <label Style="float: left;">The FABER test is</label>&nbsp;
-    <section class="dropdown">
-        <input type="text" id="txtFABER" onchange="txtMe(this)" />
-        <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtFABER', this.value)" id="ddlFABER"><option></option><option>normal.</option><option>positive on left.</option><option>positive on right.</option><option>positive bilaterally.</option></select>
-    </section>
-    <br />
-    <label Style="float: left;">The SI test is</label>&nbsp;
-    <section class="dropdown">
-        <input type="text" id="txtSI" onchange="txtMe(this)" />
-        <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtSI', this.value)" id="ddlSI"><option></option><option>normal.</option><option>positive on left.</option><option>positive on right.</option><option>positive bilaterally.</option></select>
-    </section>
-    <br />-->
 
     <div class="table-responsive" style="display:none">
         <table class="table table-bordered">
@@ -161,8 +140,9 @@
         <table>
             <tr>
                 <td>
-                    <select ID="ddlTPSide1" Style="height: 30px; width: 100px"></select>
+                    <select ID="ddlTPSide1" Style="height: 30px; width: 100px">
                      <option>bilateral</option>
+                     </select>
                     <input type="text" ID="txtTPText1" onchange="txtMe(this)" Style="margin-left: 10px;Width:557px" />
                 </td>
             </tr>
@@ -204,7 +184,7 @@
         <span class="control-label">Notes</span>
     </section>
     <section class="col-md-9" style="margin-top: 5px">
-        <textarea id="txtFreeForm" Style="width:700px;height:100px" onchange="txtAreaMe(this)"></textarea>
+        <textarea id="txtFreeForm" Style="width:700px;height:100px" onchange="txtAreaMe(this)" Text="Tender (+) interspinous region, at facets L3-4, L4-5, L5-S1 bilaterally. Axial lumbar facet loading positive bilaterally, lower back pain worse on extension and lateral rotation of the lumbar spine bilaterally. Patrick test (+) bilaterally. Kemp test (+) bilaterally. Lumbar rigidity (+). Muscle spasms (+). Trigger points identified at bilateral lumbar paraspinal muscles - taut bands with discrete, hyperirritable, tender spots, with palpation induced muscle twitches and pain referred to buttocks"></textarea>
         <button type="button" id="start_button2" onclick="startButton2(event)">
             <img src="images/mic.gif" alt="start" />
         </button>
