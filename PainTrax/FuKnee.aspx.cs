@@ -1233,12 +1233,12 @@ public partial class FuKnee : System.Web.UI.Page
     protected void BindROM()
     {
 
-        long _ieID = Convert.ToInt64(Session["PatientIE_ID"]);
+        _FuId = Session["patientFUId"].ToString();
         string sProvider = ConfigurationManager.ConnectionStrings["connString_V3"].ConnectionString;
         string SqlStr = "";
         oSQLConn.ConnectionString = sProvider;
         oSQLConn.Open();
-        SqlStr = "Select * from tblFUbpknee WHERE PatientFU_ID = " + _ieID;
+        SqlStr = "Select * from tblFUbpknee WHERE PatientFU_ID = " + _FuId;
         SqlDataAdapter sqlAdapt = new SqlDataAdapter(SqlStr, oSQLConn);
         SqlCommandBuilder sqlCmdBuilder = new SqlCommandBuilder(sqlAdapt);
         DataTable sqlTbl = new DataTable();

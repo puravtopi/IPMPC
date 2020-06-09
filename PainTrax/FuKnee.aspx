@@ -102,89 +102,6 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10" id="content">
-                <%--    <ul class="breadcrumb">
-                                <li>
-                                    <i class="icon-home"></i>
-                                    <a href="Page1.aspx"><span class="label">Page1</span></a>
-                                </li>
-                                <li id="lipage2">
-                                    <i class="icon-edit"></i>
-                                    <a href="Page2.aspx"><span class="label label-success">Page2</span></a>
-                                </li>
-                                <li id="li1" runat="server" enable="false">
-                                    <i class="icon-edit"></i>
-                                    <a href="Page3.aspx"><span class="label">Page3</span></a>
-                                </li>
-                                <li id="li2" runat="server" enable="false">
-                                    <i class="icon-edit"></i>
-                                    <a href="Page4.aspx"><span class="label">Page4</span></a>
-                                </li>
-                            </ul>--%>
-                <%-- <div class="row">
-                    <div class="col-md-3">
-                        <label class="control-label"><b><u>CHIEF COMPLAINT</u></b></label>
-                    </div>
-                    <div class="col-md-9" style="margin-top: 5px">
-                        <div id="WrapLeft" runat="server">
-                            <label class="control-label">The patient complains of </label>
-                            <label class="control-label">&nbsp; Left knee pain that is &nbsp;</label>
-                            <asp:TextBox runat="server" ID="txtPainScaleLeft" Style="margin-left: 0px;" Width="40px"></asp:TextBox>
-                            <label class="control-label">&nbsp; /10, with 10 being the worst, which is ,&nbsp;</label>
-                            <asp:CheckBox ID="chkContentLeft" Style="" runat="server" Text="constant" />
-                            <asp:CheckBox ID="chkIntermittentLeft" Style="" runat="server" Text="intermittent." />
-                            <asp:CheckBox ID="chkSharpLeft" Style="" runat="server" Text="sharp  " Checked="true" />
-                            <asp:CheckBox ID="chkElectricLeft" Style="" runat="server" Text="electric,  " />
-                            <asp:CheckBox ID="chkShootingLeft" Style="" runat="server" Text="shooting,  " Checked="true" />
-                            <asp:CheckBox ID="chkThrobblingLeft" Style="" runat="server" Text="throbbing,  " />
-                            <asp:CheckBox ID="chkPulsatingLeft" Style="" runat="server" Text="pulsating,  " />
-                            <asp:CheckBox ID="chkDullLeft" Style="" runat="server" Text="&nbsp;dull,&nbsp;" />
-                            <asp:CheckBox ID="chkAchyLeft" Style="" runat="server" Text="&nbsp;achy in nature.&nbsp;" />
-                            <label class="control-label">The knee pain worsens with </label>
-                            <asp:CheckBox ID="chkWorseMovementLeft" Style="" runat="server" Text="movement,  " />
-                            <asp:CheckBox ID="chkWorseWalkingLeft" Style="" runat="server" Text="walking,  " Checked="true" />
-                            <asp:CheckBox ID="chkWorseStairsLeft" Style="" runat="server" Text="climbing stairs,  " Checked="true" />
-                            <asp:CheckBox ID="chkWorseSquattingLeft" Style="" runat="server" Text="squatting,  " Checked="true" />
-                            <asp:CheckBox ID="chkWorseActivitiesLeft" Style="" runat="server" Text="activities  " />
-                            <asp:CheckBox ID="chkWorseOtherLeft" Style="" runat="server" Text="and&nbsp; " />
-                            <asp:TextBox ID="txtWorseOtherTextLeft" runat="server" Width="200"> </asp:TextBox>
-                            <label class="control-label">The knee pain is improved with&nbsp; </label>
-                            <asp:CheckBox ID="chkImprovedRestingLeft" Style="" runat="server" Text="resting,  " />
-                            <asp:CheckBox ID="chkImprovedMedicationLeft" Style="" runat="server" Text="medication,  " />
-                            <asp:CheckBox ID="chkImprovedTherapyLeft" Style="" runat="server" Text="therapy,  " />
-                            <asp:CheckBox ID="chkImprovedSleepingLeft" Style="" runat="server" Text="sleeping." />
-                        </div>
-                        <br />
-                        <div id="wrpRight" runat="server">
-                            <label class="control-label">The patient complains of</label>
-                            <label class="control-label">&nbsp; right knee pain that is &nbsp;</label>
-                            <asp:TextBox runat="server" ID="txtPainScaleRight" Style="margin-left: 0px;" Width="40px"> </asp:TextBox>
-                            <label class="control-label">&nbsp; /10, with 10 being the worst, which is ,&nbsp;</label>
-                            <asp:CheckBox ID="chkContentRight" Style="" runat="server" Text="constant" />
-                            <asp:CheckBox ID="chkIntermittentRight" Style="" runat="server" Text="intermittent." />
-                            <asp:CheckBox ID="chkSharpRight" Style="" runat="server" Text="sharp  " Checked="true" />
-                            <asp:CheckBox ID="chkElectricRight" Style="" runat="server" Text="electric,  " />
-                            <asp:CheckBox ID="chkShootingRight" Style="" runat="server" Text="shooting,  " Checked="true" />
-                            <asp:CheckBox ID="chkThrobblingRight" Style="" runat="server" Text="throbbing,  " />
-                            <asp:CheckBox ID="chkPulsatingRight" Style="" runat="server" Text="pulsating,  " />
-                            <asp:CheckBox ID="chkDullRight" Style="" runat="server" Text="dull,  " />
-                            <asp:CheckBox ID="chkAchyRight" Style="" runat="server" Text="achy in nature.  " />
-                            <label class="control-label">&nbsp;The knee pain worsens with&nbsp; </label>
-                            <asp:CheckBox ID="chkWorseMovementRight" Style="" runat="server" Text="movement,  " />
-                            <asp:CheckBox ID="chkWorseWalkingRight" Style="" runat="server" Text="walking,  " Checked="true" />
-                            <asp:CheckBox ID="chkWorseStairsRight" Style="" runat="server" Text="climbing stairs,  " />
-                            <asp:CheckBox ID="chkWorseSquattingRight" Style="" runat="server" Text="squatting,  " Checked="true" />
-                            <asp:CheckBox ID="chkWorseActivitiesRight" Style="" runat="server" Text="activities  " />
-                            <asp:CheckBox ID="chkWorseOtherRight" Style="" runat="server" Text="and&nbsp;&nbsp; " />
-                            <asp:TextBox ID="txtWorseOtherTextRight" Style="" runat="server" Width="200"> </asp:TextBox>
-                            <label class="control-label">The knee pain is improved with &nbsp;</label>
-                            <asp:CheckBox ID="chkImprovedRestingRight" Style="" runat="server" Text="resting,  " />
-                            <asp:CheckBox ID="chkImprovedMedicationRight" Style="" runat="server" Text="medication,  " />
-                            <asp:CheckBox ID="chkImprovedTherapyRight" Style="" runat="server" Text="therapy,  " />
-                            <asp:CheckBox ID="chkImprovedSleepingRight" Style="" runat="server" Text="sleeping." />
-                        </div>
-                        <br />
-                    </div>
-                </div>--%>
 
                 <div runat="server" id="CF">
                 </div>
@@ -203,16 +120,14 @@
                         <div style="display: none"><span class="final" id="final_span1"></span><span class="interim" id="interim_span1"></span></div>
                     </div>
                 </div>
-               
-                <%--<tr>
-                            <th style="width: 10%;"><label class="control-label">PHYSICAL EXAM:</label></th>
-                            <th style="width: 90%;">--%>
+
+
                 <div class="row">
                     <div class="col-md-3">
                         <label class="control-label"><b><u>PHYSICAL EXAM:</u></b></label>
                     </div>
 
-                         <div class="col-md-9" style="margin-top: 5px">
+                    <div class="col-md-9" style="margin-top: 5px">
 
                         <asp:Repeater runat="server" ID="repROM" OnItemDataBound="repROM_ItemDataBound">
                             <HeaderTemplate>
@@ -233,10 +148,10 @@
                                         <td></td>
                                         <td style="">Left
                                         </td>
-                                       
+
                                         <td style="">Right
                                         </td>
-                                      
+
                                         <td style="">Normal
                                         </td>
                                     </tr>
@@ -245,10 +160,10 @@
                                 <tr>
                                     <td style="text-align: left;">
                                         <asp:Label runat="server" ID="lblname" Text='<%# Eval("name") %>'></asp:Label></td>
-                                   
+
                                     <td>
                                         <asp:TextBox ID="txtleft" runat="server" Width="50px" onkeypress="return onlyNumbers(event);" Text='<%# Eval("left") %>'></asp:TextBox></td>
-                                   
+
                                     <td>
                                         <asp:TextBox ID="txtright" Width="50px" Text='<%# Eval("right") %>' onkeypress="return onlyNumbers(event);" runat="server"></asp:TextBox></td>
                                     <td>
@@ -267,9 +182,9 @@
                     <div runat="server" id="divPE">
                     </div>
 
-                    
+
                     <asp:HiddenField runat="server" ID="hdPEvalue" />
-                  
+
 
                 </div>
 

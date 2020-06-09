@@ -126,7 +126,7 @@
 
                 <asp:HiddenField runat="server" ID="hdCCvalue" />
 
-                <div class="row">
+                <div class="row" style="display:none">
                     <div class="col-md-3">
                         <label class="control-label">Notes</label>
                     </div>
@@ -145,7 +145,7 @@
                         <label class="control-label"><b><u>PHYSICAL EXAM:</u></b></label>
                     </div>
 
-                    <div class="col-md-9" style="margin-top: 5px">
+                    <div class="col-md-9" style="margin-top: 5px;display:none">
 
                         <asp:Repeater runat="server" ID="repROM" OnItemDataBound="repROM_ItemDataBound">
                             <HeaderTemplate>
@@ -318,7 +318,7 @@
 
 
                 </div>
-                <div class="row">
+                <div class="row" style="display:none">
                     <div class="col-md-3">
                         <label class="control-label">Notes:</label>
                     </div>

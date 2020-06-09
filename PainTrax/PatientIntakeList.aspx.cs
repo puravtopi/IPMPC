@@ -3776,10 +3776,6 @@ public partial class PatientIntakeList : System.Web.UI.Page
 
 
             str = str.Replace("#diagnostic", strDaignosis);
-
-
-
-
             str = str.Replace("#follow-up", ds.Tables[0].Rows[0]["FollowUpIn"].ToString().Trim());
 
             //query = "Select * from tblFUMedicationRx WHERE PatientFUid_ID=" + PatientFU_ID;

@@ -112,83 +112,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10" id="content">
-                <%--    <ul class="breadcrumb">
-                                <li>
-                                    <i class="icon-home"></i>
-                                    <a href="Page1.aspx"><span class="label">Page1</span></a>
-                                </li>
-                                <li id="lipage2">
-                                    <i class="icon-edit"></i>
-                                    <a href="Page2.aspx"><span class="label label-success">Page2</span></a>
-                                </li>
-                                <li id="li1" runat="server" enable="false">
-                                    <i class="icon-edit"></i>
-                                    <a href="Page3.aspx"><span class="label">Page3</span></a>
-                                </li>
-                                <li id="li2" runat="server" enable="false">
-                                    <i class="icon-edit"></i>
-                                    <a href="Page4.aspx"><span class="label">Page4</span></a>
-                                </li>
-                            </ul>--%>
-                <%-- <div class="row">
-                    <div class="col-md-3">
-                        <label class="control-label"><b><u>CHIEF COMPLAINT</u></b></label>
-                    </div>
-                    <div class="col-md-9" style="margin-top: 5px">
-                        <div id="WrapLeft" runat="server">
-                            <label class="control-label">The patient complains of left elbow pain that is&nbsp;</label>
-                            <asp:TextBox ID="txtPainScaleLeft" Width="40px" runat="server"></asp:TextBox>
-                            <label class="control-label">/10 and </label>
-                            <asp:CheckBox ID="chkContentLeft" runat="server" Text="constant" />
-                            <asp:CheckBox ID="chkIntermittentLeft" runat="server" Text="intermittent." />
-                            <asp:CheckBox ID="chksharpLeft" runat="server" Text="sharp, " />
-                            <asp:CheckBox ID="chkelectricLeft" runat="server" Text="electric, " />
-                            <asp:CheckBox ID="chkshootingLeft" runat="server" Text="shooting, " />
-                            <asp:CheckBox ID="chkthrobbingLeft" runat="server" Text="throbbing, " />
-                            <asp:CheckBox ID="chkpulsatingLeft" runat="server" Text="pulsating, " />
-                            <asp:CheckBox ID="chkdullLeft" runat="server" Text="dull, " />
-                            <asp:CheckBox ID="chkachyinnatureLeft" runat="server" Text="achy in nature." />
-                            <label class="control-label">The patient complains of pain specifically at the &nbsp; </label>
-                            <asp:CheckBox ID="chkMedEpicondyleLeft" runat="server" Text="medial epicondyle,  " />
-                            <asp:CheckBox ID="chkLatEpicondyleLeft" runat="server" Text="lateral epicondyle,  " />
-                            <asp:CheckBox ID="chkOlecranonLeft" runat="server" Text="olecranon aspect of the elbow. " />
-                            <label class="control-label">The elbow pain is worsened with </label>
-                            <asp:CheckBox ID="chkmovementLeft" runat="server" Text="movement,  " />
-                            <asp:CheckBox ID="chkraisingthearmLeft" runat="server" Text="raising the arm,  " />
-                            <asp:CheckBox ID="chkliftingobjectsLeft" runat="server" Text="lifting objects, " />
-                            <asp:CheckBox ID="chkrotationLeft" runat="server" Text="rotation, " />
-                            <asp:CheckBox ID="chkworkingLeft" runat="server" Text="working, " />
-                            <asp:TextBox ID="txtNoteLeft" runat="server"></asp:TextBox>
-                        </div>
-                        <br />
-                        <div id="wrpRight" runat="server">
-                            <label class="control-label">The patient complains of right  elbow pain that is&nbsp;</label>
-                            <asp:TextBox ID="txtPainScaleRight" Width="40px" runat="server"></asp:TextBox>
-                            <label class="control-label">/10 and </label>
-                            <asp:CheckBox ID="chkContentRight" runat="server" Text="constant" />
-                            <asp:CheckBox ID="chkIntermittentRight" runat="server" Text="intermittent." />
-                            <asp:CheckBox ID="chksharpRight" runat="server" Text="sharp, " />
-                            <asp:CheckBox ID="chkelectricRight" runat="server" Text="electric, " />
-                            <asp:CheckBox ID="chkshootingRight" runat="server" Text="shooting, " />
-                            <asp:CheckBox ID="chkthrobbingRight" runat="server" Text="throbbing, " />
-                            <asp:CheckBox ID="chkpulsatingRight" runat="server" Text="pulsating, " />
-                            <asp:CheckBox ID="chkdullRight" runat="server" Text="dull, " />
-                            <asp:CheckBox ID="chkachyinnatureRight" runat="server" Text="achy in nature." />
-                            <label class="control-label">The patient complains of pain specifically at the  &nbsp;</label>
-                            <asp:CheckBox ID="chkMedEpicondyleRight" runat="server" Text="medial epicondyle,  " />
-                            <asp:CheckBox ID="chkLatEpicondyRight" runat="server" Text="lateral epicondyle,  " />
-                            <asp:CheckBox ID="chkOlecranonRight" runat="server" Text="olecranon aspect of the elbow. " />
-                            <label class="control-label">The elbow pain is worsened with </label>
-                            <asp:CheckBox ID="chkmovementRight" runat="server" Text="movement,  " />
-                            <asp:CheckBox ID="chkraisingthearmRight" runat="server" Text="raising the arm,  " />
-                            <asp:CheckBox ID="chkliftingobjectsRight" runat="server" Text="lifting objects, " />
-                            <asp:CheckBox ID="chkrotationRight" runat="server" Text="rotation, " />
-                            <asp:CheckBox ID="chkworkingRight" runat="server" Text="working, " />
-                            <asp:TextBox ID="txtNoteRight" runat="server"></asp:TextBox>
-                        </div>
-                    </div>
-                </div>--%>
-
+             
                 <div runat="server" id="CF">
                 </div>
 
@@ -196,7 +120,7 @@
                 <asp:HiddenField runat="server" ID="hdCCvalue" />
 
 
-                <div class="row">
+                <div class="row" style="display:none">
                     <div class="col-md-3">
                         <label class="control-label">Notes</label>
                     </div>
@@ -212,7 +136,7 @@
                         <label class="control-label"><b><u>PHYSICAL EXAM:</u></b></label>
                     </div>
 
-                    <div class="col-md-9" style="margin-top: 5px">
+                    <div class="col-md-9" style="margin-top: 5px;display:none">
 
                         <asp:Repeater runat="server" ID="repROM" OnItemDataBound="repROM_ItemDataBound">
                             <HeaderTemplate>
@@ -333,30 +257,9 @@
 
                    
                     <asp:HiddenField runat="server" ID="hdPEvalue" />
-                  
-                    <%-- <div class="col-md-9" style="margin-top: 5px">
-
-                        <div id="wrpLeft2" runat="server">
-
-                            <asp:Label Font-Bold="false" runat="server" Text="There is tenderness upon palpation of the Left elbow. Range of motion is &nbsp;"></asp:Label>
-                            <editable:EditableDropDownList runat="server" ID="cboRangeOfMotionLeft" Width="257px" CssClass="inline">
-                            </editable:EditableDropDownList>
-                            <asp:Label Font-Bold="false" runat="server" Text="&nbsp; Tinel is &nbsp;"></asp:Label>
-                            <editable:EditableDropDownList runat="server" ID="cboTinelLeft" Width="257px" CssClass="inline">
-                            </editable:EditableDropDownList>
-                        </div>
-                        <br />
-                        <div id="wrpRight2" runat="server">
-                            <asp:Label Font-Bold="false" runat="server" Text="There is tenderness upon palpation of the Right elbow. Range of motion is &nbsp;"></asp:Label>
-                            <editable:EditableDropDownList runat="server" ID="cboRangeOfMotionRight" Width="257px" CssClass="inline">
-                            </editable:EditableDropDownList>
-                            <asp:Label runat="server" Font-Bold="false" Text="&nbsp; Tinel is &nbsp;"></asp:Label>
-                            <editable:EditableDropDownList runat="server" ID="cboTinelRight" Width="257px" CssClass="inline">
-                            </editable:EditableDropDownList>
-                        </div>
-                    </div>--%>
+                 
                 </div>
-                <div class="row">
+                <div class="row" style="display:none">
                     <div class="col-md-3">
                         <label class="control-label">Notes</label>
                     </div>

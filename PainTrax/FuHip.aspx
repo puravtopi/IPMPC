@@ -131,7 +131,7 @@
              
                 <asp:HiddenField runat="server" ID="hdCCvalue" />
                
-                <div class="row">
+                <div class="row"style="display:none">
                     <div class="col-md-3">
                         <label class="control-label">Notes</label>
                     </div>
@@ -320,7 +320,7 @@
                   
 
                 </div>
-                <div class="row">
+                <div class="row" style="display:none">
                     <div class="col-md-3">
                         <label class="control-label">Notes</label>
                     </div>

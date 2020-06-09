@@ -156,7 +156,7 @@
                         <label class="control-label"><b><u>PHYSICAL EXAM:</u></b></label>
                     </div>
 
-                    <div class="col-md-9" style="margin-top: 5px;display:none">
+                    <div class="col-md-9" style="margin-top: 5px; display: none">
 
                         <asp:Repeater runat="server" ID="repROM" OnItemDataBound="repROM_ItemDataBound">
                             <HeaderTemplate>
@@ -209,59 +209,18 @@
                         </asp:Repeater>
 
 
-                        <div runat="server" id="divPE">
-                        </div>
 
-                       
-                        <asp:HiddenField runat="server" ID="hdPEvalue" />
-                       
+
                     </div>
 
-                    <%-- <div class="col-md-9" style="margin-top: 5px">
-                        <br />
-                        <div id="wrpLeft2" runat="server">
-
-                            <label class="control-label">The left ankle ROM is</label>
-                            <editable:EditableDropDownList runat="server" ID="cboRangeOfMotionLeft" Width="257px" CssClass="inline">
-                            </editable:EditableDropDownList>
-                            <label class="control-label">with local tenderness upon palpation of the  </label>
-                            <asp:CheckBox ID="chkPalpationMedMalleolusLeft" Style="" runat="server" Checked="true" Text="medial malleolus,  " />
-                            <asp:CheckBox ID="chkPalpationLatMalleolusLeft" Style="" runat="server" Checked="true" Text="lateral malleolus,  " />
-                            <asp:CheckBox ID="chkPalpationAchillesLeft" runat="server" Style="" Text="Achilles tendon." />
-                            <label class="control-label">The left ankle pain is worsened with </label>
-                            <asp:CheckBox ID="chkWorsePlantarLeft" Style="" runat="server" Checked="true" Text="plantar flexion,  " />
-                            <asp:CheckBox ID="chkWorseDorsiLeft" Style="" runat="server" Checked="true" Text="dorsiflexion,  " />
-                            <asp:CheckBox ID="chkWorseEversionLeft" runat="server" Style="" Text="eversion,  " />
-                            <asp:CheckBox ID="chkWorseInversionLeft" Style="" runat="server" Text="inversion,  " />
-                            <asp:CheckBox ID="chkWorseExtensionLeft" Style="" runat="server" Text="extension,  " />
-                            <asp:CheckBox ID="chkWorseAmbulationLeft" runat="server" Style="" Text="ambulation." />
-                            <label class="control-label">There is </label>
-                            <asp:CheckBox ID="chkEdemaLeft" Style="" Checked="true" runat="server" Text="edema,  " />
-                            <asp:CheckBox ID="chkEcchymosisLeft" Style="" runat="server" Text="ecchymosis over the left ankle." />
-                        </div>
-                        <br />
-                        <div id="wrpRight2" runat="server">
-                            <label class="control-label">The right ankle ROM is</label>
-                            <editable:EditableDropDownList runat="server" ID="cboRangeOfMotionRight" Width="257px" CssClass="inline">
-                            </editable:EditableDropDownList>
-                            <label class="control-label">with local tenderness upon palpation of the </label>
-                            <asp:CheckBox ID="chkPalpationMedMalleolusRight" Style="" runat="server" Checked="true" Text="medial malleolus,  " />
-                            <asp:CheckBox ID="chkPalpationLatMalleolusRight" Style="" runat="server" Checked="true" Text="lateral malleolus,  " />
-                            <asp:CheckBox ID="chkPalpationAchillesRight" runat="server" Style="" Text="Achilles tendon." />
-                            <label class="control-label">The left ankle pain is worsened with</label>
-                            <asp:CheckBox ID="chkWorsePlantarRight" Style="" runat="server" Checked="true" Text="plantar flexion,  " />
-                            <asp:CheckBox ID="chkWorseDorsiRight" Style="" runat="server" Checked="true" Text="dorsiflexion,  " />
-                            <asp:CheckBox ID="chkWorseEversionRight" runat="server" Style="" Text="eversion,  " />
-                            <asp:CheckBox ID="chkWorseInversionRight" Style="" runat="server" Text="inversion,  " />
-                            <asp:CheckBox ID="chkWorseExtensionRight" Style="" runat="server" Text="extension,  " />
-                            <asp:CheckBox ID="chkWorseAmbulationRight" runat="server" Style="" Text="ambulation." />
-                            <label class="control-label">There is</label>
-                            <asp:CheckBox ID="chkEdemaRight" Style="" Checked="true" runat="server" Text="edema,  " />
-                            <asp:CheckBox ID="chkEcchymosisRight" Style="" runat="server" Text="ecchymosis over the left ankle." />
-                        </div>
+                    <div runat="server" id="divPE">
                     </div>
-                </div>--%>
-                    <div class="row">
+
+
+                    <asp:HiddenField runat="server" ID="hdPEvalue" />
+
+
+                    <div class="row" style="display: none">
                         <div class="col-md-3">
                             <label class="control-label">Notes</label>
                         </div>
@@ -273,20 +232,13 @@
                         </div>
                     </div>
 
-                    <%--<tr>
-                            <th style="width: 10%;"><label class="control-label">ASSESSMENT/DIAGNOSIS</label></th>
-                            <th style="width: 90%; margin-left: 40px;"></th>
-                        </tr>--%>
+
                     <asp:UpdatePanel runat="server" ID="upMedicine">
                         <ContentTemplate>
                             <div class="row">
                                 <div class="col-md-3">
                                     <label class="control-label"><b><u>ASSESSMENT/DIAGNOSIS:</u></b></label>
                                     <div class="col-md-9" style="margin-top: 5px">
-                                        <%--<asp:CheckBox ID="chkSprainStrain" Style="float: left;" runat="server" Text="Cervical muscle sprain/strain." Checked="true" /><br />
-                                <asp:CheckBox ID="chkHerniation" Style="float: left; margin-left: -18.5%" runat="server" Text="Possible cervical disc herniation." Checked="true" /><br />--%>
-                                        <%-- <asp:CheckBox ID="chkSyndrome" runat="server"  Text="Possible cervical radiculopathy vs. plexopathy vs. entrapment syndrome." Checked="true" />
-                                        --%>
                                     </div>
                                 </div>
 

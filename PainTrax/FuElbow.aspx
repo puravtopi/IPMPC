@@ -199,7 +199,7 @@
 
 
 
-                <div class="row">
+                <div class="row" style="display:none">
                     <div class="col-md-3">
                         <label class="control-label">Notes</label>
                     </div>
@@ -336,7 +336,7 @@
                     <asp:HiddenField runat="server" ID="hdPEvalue" />
                    
                 </div>
-                <div class="row">
+                <div class="row" style="display:none">
                     <div class="col-md-3">
                         <label class="control-label">Notes</label>
                     </div>

@@ -132,44 +132,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10" id="content">
-                <%--    <ul class="breadcrumb">
-                                <li>
-                                    <i class="icon-home"></i>
-                                    <a href="Page1.aspx"><span class="label">Page1</span></a>
-                                </li>
-                                <li id="lipage2">
-                                    <i class="icon-edit"></i>
-                                    <a href="Page2.aspx"><span class="label label-success">Page2</span></a>
-                                </li>
-                                <li id="li1" runat="server" enable="false">
-                                    <i class="icon-edit"></i>
-                                    <a href="Page3.aspx"><span class="label">Page3</span></a>
-                                </li>
-                                <li id="li2" runat="server" enable="false">
-                                    <i class="icon-edit"></i>
-                                    <a href="Page4.aspx"><span class="label">Page4</span></a>
-                                </li>
-                            </ul>--%>
+                
                 <div runat="server" id="CF">
                 </div>
 
                 <asp:HiddenField runat="server" ID="hdCCvalue" />
 
-                <%--<div class="row">
-                    <div class="col-md-3">
-                        <label class="control-label">Notes:</label>
-                    </div>
-                    <div class="col-md-9" style="margin-top: 5px">
-                        <asp:TextBox ID="txtFreeFormCC" runat="server" TextMode="MultiLine" Width="700px" Height="100px"></asp:TextBox>
-                        <button type="button" id="start_button1" onclick="startButton1(event)">
-                            <img src="images/mic.gif" alt="start" /></button>
-                        <div style="display: none"><span class="final" id="final_span1"></span><span class="interim" id="interim_span1"></span></div>
-                    </div>
-                </div>--%>
-                <%--<tr>
-                            <th style="width: 10%;">
-                                <label class="control-label">PHYSICAL EXAM:</label></th>
-                            <th style="width: 90%;">--%>
                 <div class="row">
                     <div class="col-md-3">
                         <label class="control-label"><b><u>PHYSICAL EXAM:</u></b></label>
@@ -301,20 +269,7 @@
                 <asp:HiddenField runat="server" ID="hdPEvalue" />
               
 
-               <%-- <div class="row">
-                    <div class="col-md-3">
-                        <label class="control-label">Notes</label>
-                    </div>
-                    <div class="col-md-9" style="margin-top: 5px">
-                        <asp:TextBox runat="server" ID="txtFreeForm" TextMode="MultiLine" Width="700px" Height="100px"></asp:TextBox>
-                        <button type="button" id="start_button" onclick="startButton(event)">
-                            <img src="images/mic.gif" alt="start" /></button>
-                        <div style="display: none"><span class="final" id="final_span"></span><span class="interim" id="interim_span"></span></div>
-                    </div>
-                </div>--%>
-                <%--<tr>
-                            <th style="width: 10%;"><label class="control-label">ASSESSMENT/DIAGNOSIS</label></th>
-                            <th style="width: 90%; margin-left: 40px;">--%>
+             
                 <asp:UpdatePanel runat="server" ID="upMedicine">
                     <ContentTemplate>
                         <div class="row">
