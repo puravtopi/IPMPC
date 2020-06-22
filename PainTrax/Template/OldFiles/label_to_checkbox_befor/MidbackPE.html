@@ -1,7 +1,7 @@
 ﻿<div class="row col-md-9">
 
-    <span Style="float: left;"><b>Thoracic Spine Examination: </b></span>&nbsp; <label> The thoracic spine exam reveals tenderness upon palpation at </label>
-    <input id="txtspineexam" type="text" style="width:100px;" value="T1-T12" onchange="txtMe(this)" />&nbsp;
+    <span Style="float: left;"><b>Thoracic Spine Examination: </b></span> <label> The thoracic spine exam reveals tenderness upon palpation at </label>
+    <input id="txtspineexam" type="text" style="width:100px;text-align:right" value="T1-T12" onchange="txtMe(this)" />
     <label>levels </label>
     <section class="dropdown">
         <input type="text" id="txtWorse1" onchange="txtMe(this)" />
@@ -29,8 +29,7 @@
             <option>severely decreased. </option>
         </select>
     </section>
-    <span>.</span>
-
+    <label class="control-label">There are palpable taut bands/trigger points with referral patterns as depicted below.</label>
 
 
 </div>
@@ -91,7 +90,7 @@
         <button type="button" id="start_button2" onclick="startButton2(event)">
             <img src="images/mic.gif" alt="start" />
         </button>
-        <section style="display: none"><span class="final" id="final_span1"></span><span class="interim" id="interim_span1"></span></section>
+        <div style="display: none"><span class="final" id="final_span1"></span><span class="interim" id="interim_span1"></span></div>
     </section>
 </section>
 

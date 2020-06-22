@@ -28,7 +28,7 @@
                 <option>radiates bilaterally</option>
             </select>
         </section>
-        <label>.</label>
+
 
         <label class="control-label">The mid-back pain worse with </label>
         <input type="checkbox" id="chkworsesitting" onclick="checkMe(this)" checked value="sitting" />sitting &nbsp;
@@ -41,12 +41,11 @@
         <input type="checkbox" id="chkworsewalking" onclick="checkMe(this)" value="walking" />walking&nbsp;
         <input type="checkbox" id="chkworseclimbing" onclick="checkMe(this)" value="climbing stairs" />climbing stairs &nbsp;
         <input type="checkbox" id="chkworsedescending" onclick="checkMe(this)" value="descending stairs" />descending stairs &nbsp;
-        <input type="checkbox" class="nocomma" id="chkworseworking" onclick="checkMe(this)" value="working" />working
-        <input type="text" id="txtPainScale2" style="Width:140px" onchange="txtMe(this);removeClass(this,'chkworseworking')" />
+        <input type="checkbox" id="chkworseworking" onclick="checkMe(this)" value="working" />working 
+        <input type="text" id="txtPainScale2" style="Width:140px" onchange="txtMe(this)" />
         <label>.</label>
 
-        <input type="checkbox" id="chkimpwith" onclick="checkMe(this)" class="nocomma" value="The mid-back back pain is improved with " />The mid-back back pain is improved with
-       
+        <label class="control-label"> The mid-back back pain is improved with </label>
         <input type="checkbox" id="chkimprovedresting" onclick="checkMe(this)" checked value="resting" />resting &nbsp;
         <input type="checkbox" id="chkimprovedmedication" onclick="checkMe(this)" value="medication" />medication &nbsp;
         <input type="checkbox" id="chkimprovedtherapy" onclick="checkMe(this)" value="therapy" />therapy &nbsp;
@@ -97,16 +96,37 @@
 
 <script type="text/javascript">
 
-    function removeClass(txt, chkid) {
-        var val = $(txt).val();
+    //window.load = PopulateDropDownList();
 
-       
+    //function PopulateDropDownList() {
 
-        if (val === '')
-            $('#' + chkid).addClass("nocomma");
-        else
-            $('#' + chkid).removeClass("nocomma");
-    }
+
+    //    var ddl = document.getElementById("ddlradiate");
+
+    //    ddl.options.length = 0;
+
+    //    $.get('/xml/HSMData.xml', function (res) {
+
+    //        //var $xml = $(xmlDoc);
+
+    //        // Find Person Tag
+    //        var Radiate = $(res).find("Radiate");
+
+
+
+    //        for (var i = 0; i < Radiate.length; i++) {
+    //            var option = document.createElement("option");
+
+    //            //Set Customer Name in Text part.
+    //            option.text = Radiate[i].getAttribute('name');
+
+
+    //            //Add the Option element to DropDownList.
+    //            ddl.options.add(option);
+    //        }
+    //    });
+
+    //}
     function checkMe(chk) {
 
         if ($(chk).prop("checked")) {

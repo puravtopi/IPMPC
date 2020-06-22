@@ -45,9 +45,9 @@ public class PrintDocumentHelper
                     String tagvalue = match.Groups[2].Value;
 
                     String[] attrib = tagvalue.Split(' ');
-                    string id = "", value = "";
+                    string id = "", value = "", classname = "";
                     bool check = false;
-                    
+
 
                     foreach (string att in attrib)
                     {
@@ -55,6 +55,14 @@ public class PrintDocumentHelper
                         {
                             String[] test = att.Split('=');
                             id = test[1];
+                        }
+                        if (att.Contains("class"))
+                        {
+                            if (att.ToLower().StartsWith("class"))
+                            {
+                                String[] test = att.Split('=');
+                                classname = test[1];
+                            }
                         }
                         if (att.ToLower().StartsWith("value"))
                         {
@@ -88,11 +96,15 @@ public class PrintDocumentHelper
 
                         Regex rx = new Regex(@"^\s*""?|""?\s*$");
                         id = rx.Replace(id, "");
+                        classname = rx.Replace(classname, "");
                         value = rx.Replace(value, "");
                         if (value.Length > 0 && check)
                         {
                             chkgrp += 1;
-                            sb.Append(value + ", ");
+                            if (classname == "nocomma")
+                                sb.Append(value+" ");
+                            else
+                                sb.Append(value + ", ");
                         }
                     }
                     else if (type == "text")
@@ -103,7 +115,7 @@ public class PrintDocumentHelper
                         if (!string.IsNullOrEmpty(value))
                             sb.Append(value + " ");
                     }
-                                                       }
+                }
                 else if (match.Groups[2].Value.Length == 0)
                 {
                     if ((prevtype == "checkbox" || prevtype == "radio") && chkgrp > 0)
@@ -312,7 +324,7 @@ public class PrintDocumentHelper
                         String tagvalue = match.Groups[2].Value;
 
                         String[] attrib = tagvalue.Split(' ');
-                        string id = "", value = "";
+                        string id = "", value = "", classname="";
                         bool check = false;
 
 
@@ -323,6 +335,14 @@ public class PrintDocumentHelper
                             {
                                 String[] test = att.Split('=');
                                 id = test[1];
+                            }
+                            if (att.Contains("class"))
+                            {
+                                if (att.ToLower().StartsWith("class"))
+                                {
+                                    String[] test = att.Split('=');
+                                    classname = test[1];
+                                }
                             }
                             if (att.ToLower().StartsWith("value"))
                             {
@@ -358,6 +378,7 @@ public class PrintDocumentHelper
                             Regex rx = new Regex(@"^\s*""?|""?\s*$");
                             id = rx.Replace(id, "");
                             value = rx.Replace(value, "");
+                            classname = rx.Replace(classname, "");
                             //if (value.Length > 0 && check)
                             string strVal = (string)value;
                             if (value.Length > 0 && check && strVal.Substring(strVal.Length - 1) == ".")
@@ -368,7 +389,11 @@ public class PrintDocumentHelper
                             else if (value.Length > 0 && check)
                             {
                                 chkgrp += 1;
-                                sb.Append(value + ", ");
+                                if (classname == "nocomma")
+                                    sb.Append(value + " ");
+                                else
+                                    sb.Append(value + ", ");
+                               
                             }
                         }
                         else if (type == "text")
@@ -483,7 +508,7 @@ public class PrintDocumentHelper
                         String tagvalue = match.Groups[2].Value;
 
                         String[] attrib = tagvalue.Split(' ');
-                        string id = "", value = "";
+                        string id = "", value = "", classname="";
                         bool check = false;
 
 
@@ -494,6 +519,14 @@ public class PrintDocumentHelper
                             {
                                 String[] test = att.Split('=');
                                 id = test[1];
+                            }
+                            if (att.Contains("class"))
+                            {
+                                if (att.ToLower().StartsWith("class"))
+                                {
+                                    String[] test = att.Split('=');
+                                    classname = test[1];
+                                }
                             }
                             if (att.ToLower().StartsWith("value"))
                             {
@@ -528,10 +561,20 @@ public class PrintDocumentHelper
                             Regex rx = new Regex(@"^\s*""?|""?\s*$");
                             id = rx.Replace(id, "");
                             value = rx.Replace(value, "");
-                            if (value.Length > 0 && check)
+                            classname = rx.Replace(classname,"");
+                            string strVal = (string)value;
+                            if (value.Length > 0 && check && strVal.Substring(strVal.Length - 1) == ".")
                             {
                                 chkgrp += 1;
-                                sb.Append(value + ", ");
+                                sb.Append(value);
+                            }
+                            else if(value.Length > 0 && check)
+                            {
+                                chkgrp += 1;
+                                if (classname == "nocomma")
+                                    sb.Append(value + " ");
+                                else
+                                    sb.Append(value + ", ");
                             }
                         }
                         else if (type == "text")
@@ -548,7 +591,7 @@ public class PrintDocumentHelper
                     {
                         if ((prevtype == "checkbox" || prevtype == "radio") && chkgrp > 0)
                         {
-                            sb.Remove(sb.Length - 2, 2).Append(" ");
+                           // sb.Remove(sb.Length - 2, 2).Append(" ");
                             if (chkgrp > 0)
                             {
                                 if (sb.ToString().LastIndexOf(",") >= 0)

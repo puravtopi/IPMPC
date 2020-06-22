@@ -270,7 +270,7 @@
                                                             </div>
                                                         <div class="form-group row">
                                                             <div class="col-sm-3">
-                                                             <label class="control-label no-padding-top" for="lbMAandProviders">MA & Providers</label>
+                                                             <label class="control-label no-padding-top" for="lbMAandProviders">Provider/MA</label>
                                                             </div>
                                                                  <div class="col-sm-3">
                                                             <asp:ListBox ID="lbMAandProviders" Rows="10" SelectionMode="Multiple" CssClass="form-control" runat="server"></asp:ListBox>

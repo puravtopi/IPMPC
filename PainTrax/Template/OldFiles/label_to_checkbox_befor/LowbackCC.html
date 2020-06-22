@@ -201,7 +201,6 @@
             </tbody>
         </table>
    
-
         <label class="control-label">The low back pain is associated with </label>
         <input type="checkbox" id="chknumbness" onclick="checkMe(this)" value="numbness" checked="checked" />numbness
         <input type="checkbox" id="chktingling" onclick="checkMe(this)" value="tingling" checked="checked" />tingling
@@ -403,11 +402,10 @@
 
         <div class="col-md-9" style="margin-top: 5px">
 
-            <input type="checkbox" id="chkLowbackpain2" value="Lower back pain is associated with weakness in " class="nocomma" onclick="checkMe(this)" checked />&nbsp;Lower back pain is associated with weakness in
-         
-            <input type="text" id="txtPainWeaknesIn" style="width:240px;" onchange="txtMe(this);" />
-            <label>.</label>
-            <label id="lblLowbackpain">The lower back pain is worsened with </label>
+            <label id="lblLowbackpain2">Lower back pain is associated with weakness in </label>
+            <input type="text" id="txtPainWeaknesIn" style="width:240px;" onchange="txtMe(this)" />
+
+            <label id="lblLowbackpain">The Lower back pain is worsened with </label>
             <input type="checkbox" id="chkworsesitting" value="sitting" checked="checked" onclick="checkMe(this)" />sitting,&nbsp;
             <input type="checkbox" id="chkworsestanding" value="standing" checked="checked" onclick="checkMe(this)" />standing,&nbsp;
             <input type="checkbox" id="chkWorselyingdown" value="lying down" checked="checked" onclick="checkMe(this)" />lying down,&nbsp;
@@ -419,10 +417,10 @@
             <input type="checkbox" id="chkworseclimbingstairs" value="climbing stairs" checked="checked" onclick="checkMe(this)" />climbing stairs,&nbsp;
             <input type="checkbox" id="chkworsedescendingstairs" value="descending stairs" checked="checked" onclick="checkMe(this)" />descending stairs,&nbsp;
             <input type="checkbox" id="chkworsedriving" value="driving" checked="checked" onclick="checkMe(this)" />driving,&nbsp;
-            <input type="checkbox" id="chkworseworking" value="working" checked="checked" onclick="checkMe(this)" class="nocomma" />working&nbsp;
-            <input type="text" id="txtworsend2" style="width:240px;" onchange="txtMe(this); removeClass(this,'chkworseworking')" />
+            <input type="checkbox" id="chkworseworking" value="working" checked="checked" onclick="checkMe(this)" />working and&nbsp;
+            <input type="text" id="txtworsend2" style="width:240px;" onchange="txtMe(this)" />
             <label>.</label>
-            <label id="Label4">Low back pain is improved with </label>
+            <label id="Label4">low back pain is improved with </label>
             <input type="checkbox" id="chkImprovedResting" value="resting" onclick="checkMe(this)" checked="checked" />resting,&nbsp;
             <input type="checkbox" id="chkImprovedMedication" value="medication" onclick="checkMe(this)" />medication,&nbsp;
             <input type="checkbox" id="chkImprovedTherapy" value="therapy" onclick="checkMe(this)" />therapy,&nbsp;
@@ -443,23 +441,11 @@
         <button type="button" id="start_button1" onclick="startButton1(event)">
             <img src="images/mic.gif" alt="start" />
         </button>
-        <section style="display: none"><span class="final" id="final_span1"></span><span class="interim" id="interim_span1"></span></section>
+        <div style="display: none"><span class="final" id="final_span1"></span><span class="interim" id="interim_span1"></span></div>
     </div>
 </div>
 
 <script>
-
-    function removeClass(txt, chkid) {
-        var val = $(txt).val();
-
-
-
-        if (val === '')
-            $('#' + chkid).addClass("nocomma");
-        else
-            $('#' + chkid).removeClass("nocomma");
-    }
-
     function referce1() {
 
 

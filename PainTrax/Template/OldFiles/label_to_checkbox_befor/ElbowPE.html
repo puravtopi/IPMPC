@@ -2,22 +2,18 @@
 <div class="col-md-9 row" style="margin-top: 5px">
     <br />
     <div id="WrapLeftPE" #leftdiv>
-        <span><b>Left Elbow Examination:</b></span><label style="visibility:hidden">#leftelbowtitle</label>
-        <label class="control-label"> there is tenderness upon palpation of the elbow. Range of motion is </label>
+
+        <label class="control-label"><b>Left Elbow Examination:</b> there is tenderness upon palpation of the elbow. Range of motion is </label>
         <section class="dropdown">
             <input type="text" id="txtRangeOfMotionLeft" onchange="txtMe(this)" value="mildly decreased. " />
             <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtRangeOfMotionLeft', this.value)" id="ddlRangeOfMotionLeft"><option></option><option>mildly decreased. </option><option>moderately decreased. </option><option>severely decreased. </option></select>
         </section>
-        <span>.</span>
-        <br />
-        <input type="checkbox" id="chkelbowtinelleft" value="Tinel is " class="nocomma" onclick="checkMe(this)" checked />&nbsp;Tinel is&nbsp;
-
-
+        <label class="control-label">Tinel is </label>
         <section class="dropdown">
             <input type="text" id="txtTinelLeft" onchange="txtMe(this)" />
             <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtTinelLeft', this.value)" id="ddlTinelLeft"></select>
         </section>
-        <span>.</span>
+
         <section class="col-md-3">
             <span class="control-label">Notes</span>
         </section>
@@ -33,24 +29,21 @@
     </div>
     <br />
     <div id="WrapRightPE" #rigthtdiv>
-        <span><b>Right Elbow Examination:</b></span><label style="visibility:hidden">#rightelbowtitle</label>
-        <label class="control-label"> there is tenderness upon palpation of the elbow. Range of motion is </label>
+        <label class="control-label"><b>Right Elbow Examination:</b> there is tenderness upon palpation of the elbow. Range of motion is </label>
 
         <section class="dropdown">
             <input type="text" id="txtRangeOfMotionRight" onchange="txtMe(this)" value="mildly decreased. " />
             <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtRangeOfMotionRight', this.value)" id="ddlRangeOfMotionRight"><option></option><option>mildly decreased. </option><option>moderately decreased. </option><option>severely decreased. </option></select>
         </section>
-        <span>.</span>
-        <br />
-        <input type="checkbox" id="chkelbowtinelright" value="Tinel is " class="nocomma" onclick="checkMe(this)" checked />&nbsp;Tinel is&nbsp;
 
+        <label class="control-label">Tinel is </label>
 
         <section class="dropdown">
             <input type="text" id="txtTinelRight" onchange="txtMe(this)" />
             <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtTinelRight', this.value)" id="ddlTinelRight"></select>
         </section>
         <br />
-        <span>.</span>
+
         <section class="col-md-3">
             <span class="control-label">Notes</span>
         </section>

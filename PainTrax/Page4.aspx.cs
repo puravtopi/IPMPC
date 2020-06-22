@@ -30,7 +30,7 @@ public partial class Page4 : System.Web.UI.Page
             }
             else
             {
-                PopulateUIDefaults();
+                //   PopulateUIDefaults();
                 bindData();
 
             }
@@ -331,115 +331,115 @@ public partial class Page4 : System.Web.UI.Page
         DBHelperClass db = new DBHelperClass();
         string query = "";
 
-        query = "select top 1 * from tblPatientIEDetailPage2 where PatientIE_ID=" + Session["PatientIE_ID"].ToString();
-        DataSet ds = db.selectData(query);
-        if (ds.Tables[0].Rows.Count > 0)
-        {
-            //chk_seizures.Checked = ds.Tables[0].Rows[0]["Seizures"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Seizures"].ToString()) : false;
-            //chk_chest_pain.Checked = ds.Tables[0].Rows[0]["ChestPain"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["ChestPain"].ToString()) : false;
-            //chk_shortness_of_breath.Checked = ds.Tables[0].Rows[0]["ShortnessOfBreath"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["ShortnessOfBreath"].ToString()) : false;
-            //chk_jaw_pain.Checked = ds.Tables[0].Rows[0]["Jawpain"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Jawpain"].ToString()) : false;
-            //chk_abdominal_pain.Checked = ds.Tables[0].Rows[0]["AbdominalPain"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["AbdominalPain"].ToString()) : false;
-            //chk_fever.Checked = ds.Tables[0].Rows[0]["Fevers"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Fevers"].ToString()) : false;
-            //chk_diarrhea.Checked = ds.Tables[0].Rows[0]["Diarrhea"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Diarrhea"].ToString()) : false;
-            //chk_bowel_bladder.Checked = ds.Tables[0].Rows[0]["Bowel"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Bowel"].ToString()) : false;
-            //chk_blurred.Checked = ds.Tables[0].Rows[0]["DoubleVision"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["DoubleVision"].ToString()) : false;
-            //chk_recent_wt.Checked = ds.Tables[0].Rows[0]["RecentWeightloss"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["RecentWeightloss"].ToString()) : false;
-            //chk_episodic_ligth.Checked = ds.Tables[0].Rows[0]["Episodic"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Episodic"].ToString()) : false;
-            //chk_rashes.Checked = ds.Tables[0].Rows[0]["Rashes"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Rashes"].ToString()) : false;
-            //chk_hearing_loss.Checked = ds.Tables[0].Rows[0]["HearingLoss"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["HearingLoss"].ToString()) : false;
-            //chk_sleep_disturbance.Checked = ds.Tables[0].Rows[0]["NightSweats"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["NightSweats"].ToString()) : false;
-            //chk_depression.Checked = ds.Tables[0].Rows[0]["Depression"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Depression"].ToString()) : false;
+        //query = "select top 1 * from tblPatientIEDetailPage2 where PatientIE_ID=" + Session["PatientIE_ID"].ToString();
+        //DataSet ds = db.selectData(query);
+        //if (ds.Tables[0].Rows.Count > 0)
+        //{
+        //chk_seizures.Checked = ds.Tables[0].Rows[0]["Seizures"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Seizures"].ToString()) : false;
+        //chk_chest_pain.Checked = ds.Tables[0].Rows[0]["ChestPain"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["ChestPain"].ToString()) : false;
+        //chk_shortness_of_breath.Checked = ds.Tables[0].Rows[0]["ShortnessOfBreath"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["ShortnessOfBreath"].ToString()) : false;
+        //chk_jaw_pain.Checked = ds.Tables[0].Rows[0]["Jawpain"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Jawpain"].ToString()) : false;
+        //chk_abdominal_pain.Checked = ds.Tables[0].Rows[0]["AbdominalPain"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["AbdominalPain"].ToString()) : false;
+        //chk_fever.Checked = ds.Tables[0].Rows[0]["Fevers"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Fevers"].ToString()) : false;
+        //chk_diarrhea.Checked = ds.Tables[0].Rows[0]["Diarrhea"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Diarrhea"].ToString()) : false;
+        //chk_bowel_bladder.Checked = ds.Tables[0].Rows[0]["Bowel"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Bowel"].ToString()) : false;
+        //chk_blurred.Checked = ds.Tables[0].Rows[0]["DoubleVision"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["DoubleVision"].ToString()) : false;
+        //chk_recent_wt.Checked = ds.Tables[0].Rows[0]["RecentWeightloss"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["RecentWeightloss"].ToString()) : false;
+        //chk_episodic_ligth.Checked = ds.Tables[0].Rows[0]["Episodic"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Episodic"].ToString()) : false;
+        //chk_rashes.Checked = ds.Tables[0].Rows[0]["Rashes"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Rashes"].ToString()) : false;
+        //chk_hearing_loss.Checked = ds.Tables[0].Rows[0]["HearingLoss"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["HearingLoss"].ToString()) : false;
+        //chk_sleep_disturbance.Checked = ds.Tables[0].Rows[0]["NightSweats"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["NightSweats"].ToString()) : false;
+        //chk_depression.Checked = ds.Tables[0].Rows[0]["Depression"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Depression"].ToString()) : false;
 
-            //chk_bloodinurine.Checked = ds.Tables[0].Rows[0]["dloodinurine"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["dloodinurine"].ToString()) : false;
+        //chk_bloodinurine.Checked = ds.Tables[0].Rows[0]["dloodinurine"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["dloodinurine"].ToString()) : false;
 
-            LTricepstxt.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRtricepsLeft"]);
-            RTricepstxt.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRtricepsRight"]);
-            LBicepstxt.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRBicepsLeft"]);
-            RBicepstxt.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRBicepsRight"]);
-            RBrachioradialis.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRBrachioRight"]);
-            LBrachioradialis.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRBrachioLeft"]);
-            LKnee.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRKneeLeft"]);
-            RKnee.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRKneeRight"]);
-            LAnkle.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRAnkleLeft"]);
-            RAnkle.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRAnkleRight"]);
-            UExchk.Checked = ds.Tables[0].Rows[0]["UEdtr"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["UEdtr"].ToString()) : false;
-            chkPinPrick.Checked = ds.Tables[0].Rows[0]["Pinprick"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Pinprick"].ToString()) : false;
-            chkLighttouch.Checked = ds.Tables[0].Rows[0]["Lighttouch"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Lighttouch"].ToString()) : false;
-            txtSensory.Text = Convert.ToString(ds.Tables[0].Rows[0]["Sensory"]);
-            LESen_Click.Checked = ds.Tables[0].Rows[0]["LEsen"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["LEsen"].ToString()) : false;
-            TextBox4.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEL3Right"]);
-            txtDMTL3.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEL3Left"]);
-            TextBox6.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEL4Right"]);
-            TextBox5.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEL4Left"]);
-            TextBox8.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEL5Right"]);
-            TextBox7.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEL5Left"]);
-            TextBox10.Text = Convert.ToString(ds.Tables[0].Rows[0]["LES1Left"]);
-            TextBox21.Text = Convert.ToString(ds.Tables[0].Rows[0]["LES1Right"]);
-            TextBox25.Text = Convert.ToString(ds.Tables[0].Rows[0]["LELumberParaspinalsRight"]);
-            TextBox24.Text = Convert.ToString(ds.Tables[0].Rows[0]["LELumberParaspinalsLeft"]);
-            UESen_Click.Checked = ds.Tables[0].Rows[0]["UEsen"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["UEsen"].ToString()) : false;
-            TextBox9.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEC5Left"]);
-            txtUEC5Right.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEC5Right"]);
-            TextBox11.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEC6Left"]);
-            TextBox12.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEC6Right"]);
-            TextBox13.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEC7Left"]);
-            TextBox14.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEC7Right"]);
-            TextBox15.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEC8Left"]);
-            TextBox16.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEC8Right"]);
-            TextBox18.Text = Convert.ToString(ds.Tables[0].Rows[0]["UET1Right"]);
-            TextBox17.Text = Convert.ToString(ds.Tables[0].Rows[0]["UET1Left"]);
-            TextBox20.Text = Convert.ToString(ds.Tables[0].Rows[0]["UECervicalParaspinalsRight"]);
-            TextBox19.Text = Convert.ToString(ds.Tables[0].Rows[0]["UECervicalParaspinalsLeft"]);
-            //  cboHoffmanexam.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["HoffmanExam"]);
-            // chkStocking.Checked = ds.Tables[0].Rows[0]["Stocking"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Stocking"].ToString()) : false;
-            //chkGlove.Checked = ds.Tables[0].Rows[0]["Glove"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Glove"].ToString()) : false;
-            LEmmst.Checked = ds.Tables[0].Rows[0]["LEmmst"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["LEmmst"].ToString()) : false;
-            TextBox23.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEHipFlexionRight"]);
-            TextBox22.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEHipFlexionLeft"]);
-            TextBox41.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEHipAbductionRight"]);
-            TextBox40.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEHipAbductionLeft"]);
-            TextBox27.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEKneeExtensionRight"]);
-            TextBox26.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEKneeExtensionLeft"]);
-            TextBox43.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEKneeFlexionRight"]);
-            TextBox42.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEKneeFlexionLeft"]);
-            TextBox29.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEAnkleDorsiRight"]);
-            TextBox28.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEAnkleDorsiLeft"]);
-            TextBox45.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEAnklePlantarRight"]);
-            TextBox44.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEAnklePlantarLeft"]);
-            TextBox47.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEAnkleExtensorRight"]);
-            TextBox46.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEAnkleExtensorLeft"]);
-            UEmmst.Checked = ds.Tables[0].Rows[0]["UEmmst"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["UEmmst"].ToString()) : false;
-            TextBox31.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEShoulderAbductionRight"]);
-            TextBox30.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEShoulderAbductionLeft"]);
-            TextBox49.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEShoulderFlexionRight"]);
-            TextBox48.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEShoulderFlexionLeft"]);
-            TextBox33.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEElbowExtensionRight"]);
-            TextBox32.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEElbowExtensionLeft"]);
-            TextBox51.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEElbowFlexionRight"]);
-            TextBox50.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEElbowFlexionLeft"]);
-            TextBox53.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEElbowSupinationRight"]);
-            TextBox52.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEElbowSupinationLeft"]);
-            TextBox55.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEElbowPronationRight"]);
-            TextBox54.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEElbowPronationLeft"]);
-            TextBox37.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEWristFlexionRight"]);
-            TextBox36.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEWristFlexionLeft"]);
-            TextBox57.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEWristExtensionRight"]);
-            TextBox56.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEWristExtensionLeft"]);
-            TextBox39.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEHandGripStrengthRight"]);
-            TextBox38.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEHandGripStrengthLeft"]);
-            TextBox59.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEHandFingerAbductorsRight"]);
-            TextBox58.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEHandFingerAbductorsLeft"]);
-            txtIntactExcept.Text = Convert.ToString(ds.Tables[0].Rows[0]["intactexcept"]);
-            LEdtr.Checked = ds.Tables[0].Rows[0]["LEdtr"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["LEdtr"].ToString()) : false;
-        }
-        else
-        {
-            PopulateUIDefaults();
-        }
+        //    LTricepstxt.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRtricepsLeft"]);
+        //    RTricepstxt.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRtricepsRight"]);
+        //    LBicepstxt.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRBicepsLeft"]);
+        //    RBicepstxt.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRBicepsRight"]);
+        //    RBrachioradialis.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRBrachioRight"]);
+        //    LBrachioradialis.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRBrachioLeft"]);
+        //    LKnee.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRKneeLeft"]);
+        //    RKnee.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRKneeRight"]);
+        //    LAnkle.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRAnkleLeft"]);
+        //    RAnkle.Text = Convert.ToString(ds.Tables[0].Rows[0]["DTRAnkleRight"]);
+        //    UExchk.Checked = ds.Tables[0].Rows[0]["UEdtr"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["UEdtr"].ToString()) : false;
+        //    chkPinPrick.Checked = ds.Tables[0].Rows[0]["Pinprick"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Pinprick"].ToString()) : false;
+        //    chkLighttouch.Checked = ds.Tables[0].Rows[0]["Lighttouch"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Lighttouch"].ToString()) : false;
+        //    txtSensory.Text = Convert.ToString(ds.Tables[0].Rows[0]["Sensory"]);
+        //    LESen_Click.Checked = ds.Tables[0].Rows[0]["LEsen"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["LEsen"].ToString()) : false;
+        //    TextBox4.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEL3Right"]);
+        //    txtDMTL3.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEL3Left"]);
+        //    TextBox6.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEL4Right"]);
+        //    TextBox5.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEL4Left"]);
+        //    TextBox8.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEL5Right"]);
+        //    TextBox7.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEL5Left"]);
+        //    TextBox10.Text = Convert.ToString(ds.Tables[0].Rows[0]["LES1Left"]);
+        //    TextBox21.Text = Convert.ToString(ds.Tables[0].Rows[0]["LES1Right"]);
+        //    TextBox25.Text = Convert.ToString(ds.Tables[0].Rows[0]["LELumberParaspinalsRight"]);
+        //    TextBox24.Text = Convert.ToString(ds.Tables[0].Rows[0]["LELumberParaspinalsLeft"]);
+        //    UESen_Click.Checked = ds.Tables[0].Rows[0]["UEsen"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["UEsen"].ToString()) : false;
+        //    TextBox9.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEC5Left"]);
+        //    txtUEC5Right.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEC5Right"]);
+        //    TextBox11.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEC6Left"]);
+        //    TextBox12.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEC6Right"]);
+        //    TextBox13.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEC7Left"]);
+        //    TextBox14.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEC7Right"]);
+        //    TextBox15.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEC8Left"]);
+        //    TextBox16.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEC8Right"]);
+        //    TextBox18.Text = Convert.ToString(ds.Tables[0].Rows[0]["UET1Right"]);
+        //    TextBox17.Text = Convert.ToString(ds.Tables[0].Rows[0]["UET1Left"]);
+        //    TextBox20.Text = Convert.ToString(ds.Tables[0].Rows[0]["UECervicalParaspinalsRight"]);
+        //    TextBox19.Text = Convert.ToString(ds.Tables[0].Rows[0]["UECervicalParaspinalsLeft"]);
+        //    //  cboHoffmanexam.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["HoffmanExam"]);
+        //    // chkStocking.Checked = ds.Tables[0].Rows[0]["Stocking"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Stocking"].ToString()) : false;
+        //    //chkGlove.Checked = ds.Tables[0].Rows[0]["Glove"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["Glove"].ToString()) : false;
+        //    LEmmst.Checked = ds.Tables[0].Rows[0]["LEmmst"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["LEmmst"].ToString()) : false;
+        //    TextBox23.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEHipFlexionRight"]);
+        //    TextBox22.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEHipFlexionLeft"]);
+        //    TextBox41.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEHipAbductionRight"]);
+        //    TextBox40.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEHipAbductionLeft"]);
+        //    TextBox27.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEKneeExtensionRight"]);
+        //    TextBox26.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEKneeExtensionLeft"]);
+        //    TextBox43.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEKneeFlexionRight"]);
+        //    TextBox42.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEKneeFlexionLeft"]);
+        //    TextBox29.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEAnkleDorsiRight"]);
+        //    TextBox28.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEAnkleDorsiLeft"]);
+        //    TextBox45.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEAnklePlantarRight"]);
+        //    TextBox44.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEAnklePlantarLeft"]);
+        //    TextBox47.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEAnkleExtensorRight"]);
+        //    TextBox46.Text = Convert.ToString(ds.Tables[0].Rows[0]["LEAnkleExtensorLeft"]);
+        //    UEmmst.Checked = ds.Tables[0].Rows[0]["UEmmst"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["UEmmst"].ToString()) : false;
+        //    TextBox31.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEShoulderAbductionRight"]);
+        //    TextBox30.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEShoulderAbductionLeft"]);
+        //    TextBox49.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEShoulderFlexionRight"]);
+        //    TextBox48.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEShoulderFlexionLeft"]);
+        //    TextBox33.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEElbowExtensionRight"]);
+        //    TextBox32.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEElbowExtensionLeft"]);
+        //    TextBox51.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEElbowFlexionRight"]);
+        //    TextBox50.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEElbowFlexionLeft"]);
+        //    TextBox53.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEElbowSupinationRight"]);
+        //    TextBox52.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEElbowSupinationLeft"]);
+        //    TextBox55.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEElbowPronationRight"]);
+        //    TextBox54.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEElbowPronationLeft"]);
+        //    TextBox37.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEWristFlexionRight"]);
+        //    TextBox36.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEWristFlexionLeft"]);
+        //    TextBox57.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEWristExtensionRight"]);
+        //    TextBox56.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEWristExtensionLeft"]);
+        //    TextBox39.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEHandGripStrengthRight"]);
+        //    TextBox38.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEHandGripStrengthLeft"]);
+        //    TextBox59.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEHandFingerAbductorsRight"]);
+        //    TextBox58.Text = Convert.ToString(ds.Tables[0].Rows[0]["UEHandFingerAbductorsLeft"]);
+        //    txtIntactExcept.Text = Convert.ToString(ds.Tables[0].Rows[0]["intactexcept"]);
+        //    LEdtr.Checked = ds.Tables[0].Rows[0]["LEdtr"] != DBNull.Value ? Convert.ToBoolean(ds.Tables[0].Rows[0]["LEdtr"].ToString()) : false;
+        //}
+        //else
+        //{
+        //   // PopulateUIDefaults();
+        //}
 
         query = "select * from tblPage3HTMLContent where  PatientIE_ID=" + Session["PatientIE_ID"].ToString();
-        ds = db.selectData(query);
+        DataSet ds = db.selectData(query);
 
         if (ds.Tables[0].Rows.Count > 0)
         {

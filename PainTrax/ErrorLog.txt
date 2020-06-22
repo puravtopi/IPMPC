@@ -7970,3 +7970,16 @@ Source: mscorlib
 TargetSite: Void AbortInternal()
 -----------------------------------------------------------
 
+Time: 11/06/2020 11:47:51 AM
+-----------------------------------------------------------
+Message: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+StackTrace:    at System.Data.Common.DbDataAdapter.UpdatedRowStatusErrors(RowUpdatedEventArgs rowUpdatedEvent, BatchCommandInfo[] batchCommands, Int32 commandCount)
+   at System.Data.Common.DbDataAdapter.UpdatedRowStatus(RowUpdatedEventArgs rowUpdatedEvent, BatchCommandInfo[] batchCommands, Int32 commandCount)
+   at System.Data.Common.DbDataAdapter.Update(DataRow[] dataRows, DataTableMapping tableMapping)
+   at System.Data.Common.DbDataAdapter.UpdateFromDataTable(DataTable dataTable, DataTableMapping tableMapping)
+   at System.Data.Common.DbDataAdapter.Update(DataTable dataTable)
+   at Page5.SaveUI(String ieID, String ieMode, Boolean bpChecked) in f:\Elance\Arumg\Git\IPMPC\PainTrax\Page5.aspx.cs:line 252
+Source: System.Data
+TargetSite: Int32 UpdatedRowStatusErrors(System.Data.Common.RowUpdatedEventArgs, BatchCommandInfo[], Int32)
+-----------------------------------------------------------
+

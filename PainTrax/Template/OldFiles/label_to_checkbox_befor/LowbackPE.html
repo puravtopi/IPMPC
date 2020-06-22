@@ -19,35 +19,33 @@
         </select>
     </section>
     <label> with muscle spasm present. </label>
-    <br />
-    <table>
-        <tr>
-            <td>
-                <input type="checkbox" id="chkSLR" value="The SLR test is " class="nocomma" onclick="checkMe(this)" checked />&nbsp;The SLR test is
+<br />
+<table>
+<tr>
+<td><label Style="float: left;">The SLR test is </label>
+    <section class="dropdown">
+        <input type="text" id="txtSLR" onchange="txtMe(this)" />
+        <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtSLR', this.value)" id="ddlSLR"><option></option><option>normal.</option><option>positive on left.</option><option>positive on right.</option><option>positive bilaterally.</option></select>
+    </section></td>
+    <td>
+    <label Style="float: left;">The FABER test is </label>
+    <section class="dropdown">
+        <input type="text" id="txtFABER" onchange="txtMe(this)" />
+        <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtFABER', this.value)" id="ddlFABER"><option></option><option>normal.</option><option>positive on left.</option><option>positive on right.</option><option>positive bilaterally.</option></select>
+    </section></td>
+</tr>
+<tr>
+</br>
+<td>
+<label Style="float: left;">The SI test is </label>&nbsp;
+    <section class="dropdown">
+        <input type="text" id="txtSI" onchange="txtMe(this)" />
+        <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtSI', this.value)" id="ddlSI"><option></option><option>normal.</option><option>positive on left.</option><option>positive on right.</option><option>positive bilaterally.</option></select>
+    </section>
+</td>
+</tr>
 
-                <section class="dropdown">
-                    <input type="text" id="txtSLR" onchange="txtMe(this)" />
-                    <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtSLR', this.value)" id="ddlSLR">
-                        <option></option>
-                        <option>normal.</option>
-                        <option>positive on left.</option>
-                        <option>positive on right.</option>
-                        <option>positive bilaterally.</option>
-                    </select>
-                </section>
-                <span>.</span>
-            </td>
-            <td>
-                <input type="checkbox" id="chkFABR" value="The FABER test is " class="nocomma" onclick="checkMe(this)" checked />&nbsp;The FABER test is
-
-                <section class="dropdown">
-                    <input type="text" id="txtFABER" onchange="txtMe(this)" />
-                    <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtFABER', this.value)" id="ddlFABER"><option></option><option>normal.</option><option>positive on left.</option><option>positive on right.</option><option>positive bilaterally.</option></select>
-                </section>
-                <span>.</span>
-            </td>
-        </tr>
-    </table>
+</table>
 
 
 
@@ -59,7 +57,8 @@
                     <td></td>
                     <td colspan="1">SLR test</td>
                     <td colspan="1">FABER's test</td>
-                   
+                    <!--<td style="">Sacroiliac compression</td>
+                    <td style="">Sacral notch tenderness</td>-->
                     <td style="">SI joint</td>
                 </tr>
             </thead>
@@ -142,29 +141,29 @@
             <tr>
                 <td>
                     <select ID="ddlTPSide1" Style="height: 30px; width: 100px">
-                        <option>bilateral</option>
-                    </select>
+                     <option>bilateral</option>
+                     </select>
                     <input type="text" ID="txtTPText1" onchange="txtMe(this)" Style="margin-left: 10px;Width:557px" />
                 </td>
             </tr>
-            <!-- <tr>
-                 <td>
-                     <select ID="ddlTPSide2" Style="height: 30px; width: 100px"></select>
-                     <input type="text" ID="txtTPText2" onchange="txtMe(this)" Style="margin-left: 10px;Width:557px" />
-                 </td>
-             </tr>
-             <tr>
-                 <td>
-                     <select ID="ddlTPSide3" Style="height: 30px; width: 100px"></select>
-                     <input type="text" ID="txtTPText3" onchange="txtMe(this)" Style="margin-left: 10px;Width:557px" />
-                 </td>
-             </tr>
-             <tr>
-                 <td>
-                     <select ID="ddlTPSide4" Style="height: 30px; width: 100px"></select>
-                     <input type="text" ID="txtTPText4" onchange="txtMe(this)" Style="margin-left: 10px;Width:557px" />
-                 </td>
-             </tr>-->
+           <!-- <tr>
+                <td>
+                    <select ID="ddlTPSide2" Style="height: 30px; width: 100px"></select>
+                    <input type="text" ID="txtTPText2" onchange="txtMe(this)" Style="margin-left: 10px;Width:557px" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select ID="ddlTPSide3" Style="height: 30px; width: 100px"></select>
+                    <input type="text" ID="txtTPText3" onchange="txtMe(this)" Style="margin-left: 10px;Width:557px" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select ID="ddlTPSide4" Style="height: 30px; width: 100px"></select>
+                    <input type="text" ID="txtTPText4" onchange="txtMe(this)" Style="margin-left: 10px;Width:557px" />
+                </td>
+            </tr>-->
         </table>
         <div class="row">
             <div class="col-md-3">

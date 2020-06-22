@@ -28,10 +28,10 @@ public partial class EditUser : System.Web.UI.Page
             {
                 string id = Request.QueryString["id"];
                 BindUserDetails(id);
-               
+
             }
 
-         
+
         }
     }
 
@@ -76,24 +76,18 @@ public partial class EditUser : System.Web.UI.Page
         try
         {
             string query = "";
-
-
-          
-
-          
-
-            if (Request["id"] != null)
+            if (Request["id"] != null) 
             {
-                query = "update tblUserMaster set LoginID='" + txtLoginID.Text + "',Password='" + txtuserpass.Text + "',GroupId="+ ddlGroup.SelectedItem.Value +",";
+                query = "update tblUserMaster set LoginID='" + txtLoginID.Text + "',Password='" + txtuserpass.Text + "',GroupId=" + ddlGroup.SelectedItem.Value + ",designation='" + ddlDesig.SelectedItem.Text + "',";
                 query = query + " desig_id=" + ddlDesig.SelectedItem.Value + ",FirstName='" + txtFirstName.Text + "',";
-                query = query + " LastName='" + txtLastName.Text + "',MiddleName='" + txtMiddleName.Text + "',";           
+                query = query + " LastName='" + txtLastName.Text + "',MiddleName='" + txtMiddleName.Text + "',";
                 query = query + " Address='" + txtAddress.Text + "',Ph_No='" + txtPhoneNo.Text + "',";
                 query = query + " eMailID='" + txtEmail.Text + "' where User_ID=" + Request["id"].ToString();
             }
             else
             {
-                query = "insert into tblUserMaster(LoginID,Password,Designation,FirstName,LastName,MiddleName,eMailID,Signature,CreatedBy,CreatedDate,desig_id,GroupId,UserMasterId,,Address,Ph_No) values('" + txtLoginID.Text + "','" + txtuserpass.Text + "','',";
-                query = query + " '" + txtFirstName.Text + "','" + txtLastName.Text + "','" + txtMiddleName.Text + "','" + txtEmail.Text + "',Null,'admin',GETDATE()," + ddlDesig.SelectedItem.Value + ",'ASMPC',"+ ddlGroup.SelectedItem.Value +",'" + txtAddress.Text + "','" + txtPhoneNo.Text + "') ";
+                query = "insert into tblUserMaster(LoginID,Password,Designation,FirstName,LastName,MiddleName,eMailID,Signature,CreatedBy,CreatedDate,desig_id,GroupId,UserMasterId,Address,Ph_No) values('" + txtLoginID.Text + "','" + txtuserpass.Text + "','" + ddlDesig.SelectedItem.Text + "',";
+                query = query + " '" + txtFirstName.Text + "','" + txtLastName.Text + "','" + txtMiddleName.Text + "','" + txtEmail.Text + "',Null,'admin',GETDATE()," + ddlDesig.SelectedItem.Value + "," + ddlGroup.SelectedItem.Value + ",'Ipmpc','" + txtAddress.Text + "','" + txtPhoneNo.Text + "') ";
             }
 
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connString_V3"].ConnectionString))

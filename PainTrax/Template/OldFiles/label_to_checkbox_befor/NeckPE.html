@@ -3,7 +3,7 @@
         The cervical spine exam reveals tenderness upon palpation at
     </label>
     <input id="txtspineexam" type="text" style="width:100px;text-align:left" value="C2-C7" onchange="txtMe(this)" />
-    <label> levels </label>
+    <label>levels</label>
     <section class="dropdown">
         <input type="text" id="txtWorse1" onchange="txtMe(this)" />
         <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtWorse1', this.value)" id="ddlWorse1"><option></option><option>, on the left</option><option>, on the right</option></select>
@@ -11,30 +11,25 @@
     <label>. </label>
 </div>
 <br />
-<div class="row">
-    <table>
-        <tr>
-            <td>
-                <input type="checkbox" id="chkspur" value="The Spurling test is " class="nocomma" onclick="checkMe(this)" checked />The Spurling test is 
-              
-                <section class="dropdown">
-                    <input type="text" id="txtSpurlings" onchange="txtMe(this)" />
-                    <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtSpurlings', this.value)" id="ddlSpurlings"><option></option><option>normal.</option><option>positive on left.</option><option>positive on right.</option><option>positive bilaterally.</option></select>
-                </section>
-                <span>. </span>
-            </td>
-            <td>
-                <input type="checkbox" id="chkspur" value="The cervical distraction test is " class="nocomma" onclick="checkMe(this)" checked />The cervical distraction test is
-                
-                <section class="dropdown">
-                    <input type="text" id="txtdistraction" onchange="txtMe(this)" />
-                    <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtdistraction', this.value)" id="ddldistraction"><option></option><option>normal.</option><option>positive on left.</option><option>positive on right.</option><option>positive bilaterally.</option></select>
-                </section>
-                <span>. </span>
-            </td>
-        </tr>
-    </table>
-</div>
+<table>
+    <tr>
+        <td>
+            <label Style="float: left;">The Spurling test is </label>&nbsp;
+            <section class="dropdown">
+                <input type="text" id="txtSpurlings" onchange="txtMe(this)" />
+                <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtSpurlings', this.value)" id="ddlSpurlings"><option></option><option>normal.</option><option>positive on left.</option><option>positive on right.</option><option>positive bilaterally.</option></select>
+            </section>
+        </td>
+        <td>
+            <label Style="float: left;">The cervical distraction test is </label>&nbsp;
+            <section class="dropdown">
+                <input type="text" id="txtdistraction" onchange="txtMe(this)" />
+                <select onchange="this.previousElementSibling.value = this.value; this.previousElementSibling.focus();selectVal('txtdistraction', this.value)" id="ddldistraction"><option></option><option>normal.</option><option>positive on left.</option><option>positive on right.</option><option>positive bilaterally.</option></select>
+            </section>
+
+        </td>
+    </tr>
+</table>
 <label style="display:none">#romneck</label>
 
 
@@ -120,7 +115,7 @@
         <button type="button" id="start_button2" onclick="startButton2(event)">
             <img src="images/mic.gif" alt="start" />
         </button>
-        <section style="display: none"><span class="final" id="final_span1"></span><span class="interim" id="interim_span1"></span></section>
+        <div style="display: none"><span class="final" id="final_span1"></span><span class="interim" id="interim_span1"></span></div>
     </section>
 </section>
 
